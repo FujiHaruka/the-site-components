@@ -12,6 +12,7 @@ import TheSearchForm from './TheSearchForm'
 import TheSignInForm from './TheSignInForm'
 import TheSignUpForm from './TheSignUpForm'
 import TheUserCreateForm from './TheUserCreateForm'
+import TheUserImage from './TheUserImage'
 
 export {
   ThePasswordChangeForm,
@@ -21,7 +22,8 @@ export {
   TheSearchForm,
   TheSignInForm,
   TheSignUpForm,
-  TheUserCreateForm
+  TheUserCreateForm,
+  TheUserImage
 }
 
 export default {
@@ -32,5 +34,6 @@ export default {
     TheSearchForm,
     TheSignInForm,
     TheSignUpForm,
-    TheUserCreateForm
+    TheUserCreateForm,
+    TheUserImage
 }

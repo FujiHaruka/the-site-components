@@ -159,6 +159,16 @@ Components
 | --- | --- | ---- | ---- |
 | `roles` |   |  | `{}` |
 
+### TheUserImage
+
+
+
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `size` |   |  | `48` |
+
 
 
 <!-- Section from "doc/guides/03.Components.md.hbs" End -->

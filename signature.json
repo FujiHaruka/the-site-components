@@ -62,5 +62,18 @@
         }
       }
     }
+  },
+  "TheUserImage": {
+    "description": "",
+    "displayName": "TheUserImage",
+    "methods": [],
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "48",
+          "computed": false
+        }
+      }
+    }
   }
 }
