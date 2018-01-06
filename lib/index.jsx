@@ -8,6 +8,7 @@ import ThePasswordChangeForm from './ThePasswordChangeForm'
 import TheProfileEditForm from './TheProfileEditForm'
 import TheRecoverResetForm from './TheRecoverResetForm'
 import TheRecoverSendForm from './TheRecoverSendForm'
+import TheSearchForm from './TheSearchForm'
 import TheSignInForm from './TheSignInForm'
 import TheSignUpForm from './TheSignUpForm'
 import TheUserCreateForm from './TheUserCreateForm'
@@ -17,6 +18,7 @@ export {
   TheProfileEditForm,
   TheRecoverResetForm,
   TheRecoverSendForm,
+  TheSearchForm,
   TheSignInForm,
   TheSignUpForm,
   TheUserCreateForm
@@ -27,6 +29,7 @@ export default {
     TheProfileEditForm,
     TheRecoverResetForm,
     TheRecoverSendForm,
+    TheSearchForm,
     TheSignInForm,
     TheSignUpForm,
     TheUserCreateForm

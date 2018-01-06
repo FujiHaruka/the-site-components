@@ -104,10 +104,60 @@ export default ExampleComponent
 Components
 -----------
 
+### ThePasswordChangeForm
+
+
+
+
+### TheProfileEditForm
+
+
+
+
+### TheRecoverResetForm
+
+
+
+
+### TheRecoverSendForm
+
+
+
+
+### TheSearchForm
+
+
+
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `name` |   |  | `'q'` |
+
 ### TheSigninForm
 
 
 
+
+### TheSignUpForm
+
+
+
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `required` |   |  | `['name', 'password']` |
+
+### TheUserCreateForm
+
+
+
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `roles` |   |  | `{}` |
 
 
 
