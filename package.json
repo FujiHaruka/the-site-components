@@ -1,6 +1,6 @@
 {
   "name": "the-site-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Components for the-site",
   "main": "shim",
   "scripts": {
