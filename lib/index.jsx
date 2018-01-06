@@ -1,7 +1,6 @@
 /**
- * Components for the-site
+ * 
  * @module the-site-components
- * @version 1.0.0
  */
 'use strict'
 
@@ -13,8 +12,6 @@ import TheSignInForm from './TheSignInForm'
 import TheSignUpForm from './TheSignUpForm'
 import TheUserCreateForm from './TheUserCreateForm'
 
-export default 
-
 export {
   ThePasswordChangeForm,
   TheProfileEditForm,
@@ -23,4 +20,14 @@ export {
   TheSignInForm,
   TheSignUpForm,
   TheUserCreateForm
+}
+
+export default {
+    ThePasswordChangeForm,
+    TheProfileEditForm,
+    TheRecoverResetForm,
+    TheRecoverSendForm,
+    TheSignInForm,
+    TheSignUpForm,
+    TheUserCreateForm
 }
