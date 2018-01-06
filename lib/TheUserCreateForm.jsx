@@ -5,7 +5,6 @@
 
 import React from 'react'
 import { TheForm, TheInput, TheButton, TheButtonGroup } from 'the-components'
-import { RoleCodes } from '@self/conf'
 
 const {Text, Radio} = TheInput
 const {Field, Label, Value} = TheForm
