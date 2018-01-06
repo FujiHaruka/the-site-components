@@ -5,12 +5,22 @@
  */
 'use strict'
 
+import ThePasswordChangeForm from './ThePasswordChangeForm'
+import TheProfileEditForm from './TheProfileEditForm'
+import TheRecoverResetForm from './TheRecoverResetForm'
+import TheRecoverSendForm from './TheRecoverSendForm'
 import TheSignInForm from './TheSignInForm'
 import TheSignUpForm from './TheSignUpForm'
+import TheUserCreateForm from './TheUserCreateForm'
 
-export default TheSiteComponents
+export default 
 
 export {
+  ThePasswordChangeForm,
+  TheProfileEditForm,
+  TheRecoverResetForm,
+  TheRecoverSendForm,
   TheSignInForm,
-  TheSignUpForm
+  TheSignUpForm,
+  TheUserCreateForm
 }

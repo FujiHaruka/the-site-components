@@ -5,8 +5,7 @@ const pkg = require('../package.json')
 
 module.exports = lib({
   dirname: __dirname,
-  pkg,
-  index: 'TheSiteComponents'
+  pkg
 })
 
 if (!module.parent) {
