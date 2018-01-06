@@ -1,7 +1,53 @@
 {
+  "ThePasswordChangeForm": {
+    "description": "",
+    "displayName": "ThePasswordChangeForm",
+    "methods": []
+  },
+  "TheProfileEditForm": {
+    "description": "",
+    "displayName": "TheProfileEditForm",
+    "methods": []
+  },
+  "TheRecoverResetForm": {
+    "description": "",
+    "displayName": "TheRecoverResetForm",
+    "methods": []
+  },
+  "TheRecoverSendForm": {
+    "description": "",
+    "displayName": "TheRecoverSendForm",
+    "methods": []
+  },
   "TheSigninForm": {
     "description": "",
     "displayName": "TheSigninForm",
     "methods": []
+  },
+  "TheSignUpForm": {
+    "description": "",
+    "displayName": "TheSignUpForm",
+    "methods": [],
+    "props": {
+      "required": {
+        "defaultValue": {
+          "value": "['name', 'password']",
+          "computed": false
+        }
+      }
+    }
+  },
+  "TheUserCreateForm": {
+    "description": "",
+    "displayName": "TheUserCreateForm",
+    "methods": [],
+    "props": {
+      "roles": {
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      }
+    }
   }
 }
