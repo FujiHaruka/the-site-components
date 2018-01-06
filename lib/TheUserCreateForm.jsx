@@ -5,7 +5,6 @@
 
 import React from 'react'
 import { TheForm, TheInput, TheButton, TheButtonGroup } from 'the-components'
-import { asForm, asBound } from '../../wrappers'
 import { RoleCodes } from '@self/conf'
 
 const {Text, Radio} = TheInput

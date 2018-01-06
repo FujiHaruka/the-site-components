@@ -5,7 +5,6 @@
 
 import React from 'react'
 import { TheForm, TheInput, TheButton } from 'the-components'
-import { asForm } from '../../wrappers'
 
 const {Text} = TheInput
 const {Field, Label, Value} = TheForm
