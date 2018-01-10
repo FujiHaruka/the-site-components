@@ -24,9 +24,9 @@ function TheSignUpForm ({
                           onStep,
                           onSubmit
                         }) {
-  const toStepZero = () => onStep(0)
-  const toStepOne = () => onStep(1)
   const email = values['profile.email']
+  const toStepZero = () => onStep(0)
+  const toStepOne = () => onStep(email ? 1 : 0)
   return (
     <TheForm {...getFormAttributes()}
              required={required}
