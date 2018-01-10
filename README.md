@@ -183,7 +183,7 @@ Components
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
-| `required` |   |  | `['name', 'password', 'email']` |
+| `required` |   |  | `['name', 'password', 'profile.email']` |
 | `nameParser` |   |  | `userNameParser` |
 | `step` |   |  | `0` |
 

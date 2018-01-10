@@ -4,7 +4,7 @@
 'use strict'
 
 import React from 'react'
-import { TheStep, TheForm, TheInput } from 'the-components'
+import { TheStep, TheForm, TheInput, TheCondition } from 'the-components'
 import { userNameParser } from './helpers'
 
 const {Text, Password} = TheInput
@@ -16,7 +16,7 @@ function TheSignUpForm ({
                           getLabelAttributesOf,
                           getFormAttributes,
                           getSubmitAttributes,
-                          required = ['name', 'password', 'email'],
+                          required = ['name', 'password', 'profile.email'],
                           children,
                           nameParser = userNameParser,
                           step = 0,
@@ -53,17 +53,19 @@ function TheSignUpForm ({
           </Field>
         </TheStep.Content>
         <TheStep.Content>
-          <Field>
-            <Label {...getLabelAttributesOf('profile.email')}>
-              {l('labels.USER_EMAIL')}
-            </Label>
-            <Value>
-              <Text {...getInputAttributesOf('profile.email')}
-                    onFocus={toStepOne}
-                    readOnly
-              />
-            </Value>
-          </Field>
+          <TheCondition if={!!getInputAttributesOf('profile.email').value}>
+            <Field>
+              <Label {...getLabelAttributesOf('profile.email')}>
+                {l('labels.USER_EMAIL')}
+              </Label>
+              <Value>
+                <Text {...getInputAttributesOf('profile.email')}
+                      onFocus={toStepOne}
+                      readOnly
+                />
+              </Value>
+            </Field>
+          </TheCondition>
           <Field>
             <Label {...getLabelAttributesOf('name')}>
               {l('labels.USER_NAME')}
