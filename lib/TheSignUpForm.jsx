@@ -12,7 +12,6 @@ const {Field, Label, Value} = TheForm
 
 function TheSignUpForm ({
                           l,
-                          values,
                           getInputAttributesOf,
                           getLabelAttributesOf,
                           getFormAttributes,
@@ -24,16 +23,14 @@ function TheSignUpForm ({
                           onStep,
                           onSubmit
                         }) {
-  const email = values['profile.email']
   const toStepZero = () => onStep(0)
-  const toStepOne = () => onStep(email ? 1 : 0)
+  const toStepOne = () => onStep(1)
   return (
     <TheForm {...getFormAttributes()}
              required={required}
              autoComplete='off'
     >
-      <TheStep {...{onStep}}
-               step={email ? step : 0}
+      <TheStep {...{step, onStep}}
                onSubmit={onSubmit}
                submitText={l('buttons.DO_SIGNUP')}
                isSubmit={step === 1}
