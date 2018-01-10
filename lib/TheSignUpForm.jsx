@@ -4,7 +4,7 @@
 'use strict'
 
 import React from 'react'
-import { TheForm, TheInput, TheButton, TheButtonGroup, TheCondition } from 'the-components'
+import { TheStep, TheForm, TheInput } from 'the-components'
 import { userNameParser } from './helpers'
 
 const {Text, Password} = TheInput
@@ -21,17 +21,21 @@ function TheSignUpForm ({
                           nameParser = userNameParser,
                           step = 0,
                           onStep,
-                          prevIcon = 'fas fa-caret-left',
-                          nextIcon = 'fas fa-caret-right',
+                          onSubmit
                         }) {
+  const toStepZero = () => onStep(0)
+  const toStepOne = () => onStep(1)
   return (
     <TheForm {...getFormAttributes()}
              required={required}
              autoComplete='off'
     >
-
-      <TheCondition if={step === 0}>
-        <div>
+      <TheStep {...{step, onStep}}
+               onSubmit={onSubmit}
+               submitText={l('buttons.DO_SIGNUP')}
+               isSubmit={step === 1}
+      >
+        <TheStep.Content>
           <Field>
             <Label {...getLabelAttributesOf('profile.email')}>
               {l('labels.USER_EMAIL')}
@@ -42,35 +46,24 @@ function TheSignUpForm ({
                     {...getInputAttributesOf('profile.email')}
                     pattern={Text.EMAIL_PATTERN}
                     patternWarning={l('warnings.SEEMS_INVALID_EMAIL')}
-                    onEnter={() => onStep(1)}
+                    onFocus={toStepZero}
+                    onEnter={toStepOne}
               />
             </Value>
           </Field>
-          <Field>
-            <TheButtonGroup align={'right'}>
-              <TheButton onClick={() => onStep(1)}
-                         style={{flexGrow: 0}}
-                         iconRight={nextIcon}
-              >
-                {l('buttons.SHOW_NEXT')}
-              </TheButton>
-            </TheButtonGroup>
-          </Field>
-        </div>
-      </TheCondition>
-      <TheCondition if={step === 1}>
-        <div>
+        </TheStep.Content>
+        <TheStep.Content>
           <Field>
             <Label {...getLabelAttributesOf('profile.email')}>
               {l('labels.USER_EMAIL')}
             </Label>
             <Value>
               <Text {...getInputAttributesOf('profile.email')}
+                    onFocus={toStepOne}
                     readOnly
               />
             </Value>
           </Field>
-
           <Field>
             <Label {...getLabelAttributesOf('name')}>
               {l('labels.USER_NAME')}
@@ -78,6 +71,7 @@ function TheSignUpForm ({
             <Value>
               <Text placeholder={l('placeholders.USER_NAME')}
                     {...getInputAttributesOf('name')}
+                    onFocus={toStepOne}
                     parser={nameParser}
               />
             </Value>
@@ -88,11 +82,10 @@ function TheSignUpForm ({
             </Label>
             <Value>
               <Text placeholder={l('placeholders.USER_PROFILE_NAME')}
+                    onFocus={toStepOne}
                     {...getInputAttributesOf('profile.name')}/>
             </Value>
           </Field>
-
-
           {children}
           <Field>
             <Label {...getLabelAttributesOf('password')}>
@@ -100,23 +93,12 @@ function TheSignUpForm ({
             </Label>
             <Value>
               <Password {...getInputAttributesOf('password')}
+                        onFocus={toStepOne}
               />
             </Value>
           </Field>
-          <Field>
-            <TheButtonGroup>
-              <TheButton onClick={() => onStep(0)}
-                         icon={prevIcon}
-              >
-                {l('buttons.SHOW_BACK')}
-              </TheButton>
-              <TheButton primary {...getSubmitAttributes()}>
-                {l('buttons.DO_SIGNUP')}
-              </TheButton>
-            </TheButtonGroup>
-          </Field>
-        </div>
-      </TheCondition>
+        </TheStep.Content>
+      </TheStep>
     </TheForm>
   )
 }

@@ -67,18 +67,6 @@
           "value": "0",
           "computed": false
         }
-      },
-      "prevIcon": {
-        "defaultValue": {
-          "value": "'fas fa-caret-left'",
-          "computed": false
-        }
-      },
-      "nextIcon": {
-        "defaultValue": {
-          "value": "'fas fa-caret-right'",
-          "computed": false
-        }
       }
     }
   },

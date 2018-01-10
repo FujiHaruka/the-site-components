@@ -186,8 +186,6 @@ Components
 | `required` |   |  | `['name', 'password']` |
 | `nameParser` |   |  | `userNameParser` |
 | `step` |   |  | `0` |
-| `prevIcon` |   |  | `'fas fa-caret-left'` |
-| `nextIcon` |   |  | `'fas fa-caret-right'` |
 
 ### TheUserCreateForm
 
