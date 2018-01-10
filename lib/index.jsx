@@ -13,6 +13,7 @@ import TheSignInForm from './TheSignInForm'
 import TheSignUpForm from './TheSignUpForm'
 import TheUserCreateForm from './TheUserCreateForm'
 import TheUserImage from './TheUserImage'
+import helpers from './helpers'
 
 export {
   ThePasswordChangeForm,
@@ -23,7 +24,8 @@ export {
   TheSignInForm,
   TheSignUpForm,
   TheUserCreateForm,
-  TheUserImage
+  TheUserImage,
+  helpers
 }
 
 export default {
@@ -35,5 +37,6 @@ export default {
     TheSignInForm,
     TheSignUpForm,
     TheUserCreateForm,
-    TheUserImage
+    TheUserImage,
+    helpers
 }

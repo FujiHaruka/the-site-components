@@ -35,7 +35,15 @@
   "TheSigninForm": {
     "description": "",
     "displayName": "TheSigninForm",
-    "methods": []
+    "methods": [],
+    "props": {
+      "nameParser": {
+        "defaultValue": {
+          "value": "userNameParser",
+          "computed": true
+        }
+      }
+    }
   },
   "TheSignUpForm": {
     "description": "",
@@ -45,6 +53,30 @@
       "required": {
         "defaultValue": {
           "value": "['name', 'password']",
+          "computed": false
+        }
+      },
+      "nameParser": {
+        "defaultValue": {
+          "value": "userNameParser",
+          "computed": true
+        }
+      },
+      "step": {
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "prevIcon": {
+        "defaultValue": {
+          "value": "'fas fa-caret-left'",
+          "computed": false
+        }
+      },
+      "nextIcon": {
+        "defaultValue": {
+          "value": "'fas fa-caret-right'",
           "computed": false
         }
       }

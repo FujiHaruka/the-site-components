@@ -75,15 +75,46 @@ Usage
 'use strict'
 
 import React from 'react'
-import { TheSiteComponents, TheSiteComponentsStyle } from 'the-site-components'
+import { TheSignInForm, TheSignUpForm } from 'the-site-components'
 
-class ExampleComponent extends React.PureComponent {
+import { withForm, TheThemeStyle, TheIcon } from 'the-components'
+
+const SignInForm = withForm(TheSignInForm)
+const SignUpForm = withForm(TheSignUpForm)
+
+class ExampleComponent extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      signInValues: {},
+      signUpValues: {},
+      signUpStep: 0
+    }
+  }
+
   render () {
+    const l = (key) => ({})[key] || key.split(/\./g).pop()
     return (
       <div>
-        <TheSiteComponentsStyle/>
-        <TheSiteComponents id='my-component'>
-        </TheSiteComponents>
+        <TheThemeStyle/>
+        <TheIcon.CdnLink/>
+        <h1>TheSignInForm</h1>
+        <div>
+          <SignInForm {...{l}}
+                      values={this.state.signInValues}
+                      onUpdate={(signInValues) => this.setState({signInValues})}
+          />
+        </div>
+        <h1>SignUpForm</h1>
+        <div>
+          <SignUpForm {...{l}}
+                      values={this.state.signUpValues}
+                      onUpdate={(signUpValues) => this.setState({signUpValues})}
+                      step={this.state.signUpStep}
+                      onStep={(signUpStep) => this.setState({signUpStep})}
+          />
+        </div>
+        <hr/>
       </div>
 
     )
@@ -138,6 +169,11 @@ Components
 
 
 
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `nameParser` |   |  | `userNameParser` |
 
 ### TheSignUpForm
 
@@ -148,6 +184,10 @@ Components
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
 | `required` |   |  | `['name', 'password']` |
+| `nameParser` |   |  | `userNameParser` |
+| `step` |   |  | `0` |
+| `prevIcon` |   |  | `'fas fa-caret-left'` |
+| `nextIcon` |   |  | `'fas fa-caret-right'` |
 
 ### TheUserCreateForm
 

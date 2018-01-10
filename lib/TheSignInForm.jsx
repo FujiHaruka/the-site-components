@@ -5,18 +5,20 @@
 
 import React from 'react'
 import { TheForm, TheInput, TheButton } from 'the-components'
+import { userNameParser } from './helpers'
 
 const {Text, Password} = TheInput
 const {Field, Label, Value} = TheForm
 
 function TheSigninForm ({
+                          l,
                           getInputAttributesOf,
                           getLabelAttributesOf,
                           getFormAttributes,
                           getSubmitAttributes,
                           onSubmit,
                           children,
-                          l
+                          nameParser = userNameParser
                         }) {
   return (
     <TheForm {...getFormAttributes()}
@@ -31,6 +33,7 @@ function TheSigninForm ({
         <Value>
           <Text placeholder={l('placeholders.USER_NAME')}
                 {...getInputAttributesOf('name')}
+                parser={nameParser}
           />
         </Value>
       </Field>
