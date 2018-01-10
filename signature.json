@@ -52,7 +52,7 @@
     "props": {
       "required": {
         "defaultValue": {
-          "value": "['name', 'password']",
+          "value": "['name', 'password', 'email']",
           "computed": false
         }
       },

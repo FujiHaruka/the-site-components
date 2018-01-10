@@ -28,14 +28,14 @@ class ExampleComponent extends React.Component {
         <div>
           <SignInForm {...{l}}
                       values={this.state.signInValues}
-                      onUpdate={(signInValues) => this.setState({signInValues})}
+                      onUpdate={(signInValues) => this.setState({signInValues: Object.assign(this.state.signInValues, signInValues)})}
           />
         </div>
         <h1>SignUpForm</h1>
         <div>
           <SignUpForm {...{l}}
                       values={this.state.signUpValues}
-                      onUpdate={(signUpValues) => this.setState({signUpValues})}
+                      onUpdate={(signUpValues) => this.setState({signUpValues: Object.assign(this.state.signUpValues, signUpValues)})}
                       step={this.state.signUpStep}
                       onStep={(signUpStep) => this.setState({signUpStep})}
           />

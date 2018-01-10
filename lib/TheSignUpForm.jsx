@@ -12,11 +12,12 @@ const {Field, Label, Value} = TheForm
 
 function TheSignUpForm ({
                           l,
+                          values,
                           getInputAttributesOf,
                           getLabelAttributesOf,
                           getFormAttributes,
                           getSubmitAttributes,
-                          required = ['name', 'password'],
+                          required = ['name', 'password', 'email'],
                           children,
                           nameParser = userNameParser,
                           step = 0,
@@ -25,12 +26,14 @@ function TheSignUpForm ({
                         }) {
   const toStepZero = () => onStep(0)
   const toStepOne = () => onStep(1)
+  const email = values['profile.email']
   return (
     <TheForm {...getFormAttributes()}
              required={required}
              autoComplete='off'
     >
-      <TheStep {...{step, onStep}}
+      <TheStep {...{onStep}}
+               step={email ? step : 0}
                onSubmit={onSubmit}
                submitText={l('buttons.DO_SIGNUP')}
                isSubmit={step === 1}
@@ -94,6 +97,7 @@ function TheSignUpForm ({
             <Value>
               <Password {...getInputAttributesOf('password')}
                         onFocus={toStepOne}
+                        autoComplete='new-password'
               />
             </Value>
           </Field>
