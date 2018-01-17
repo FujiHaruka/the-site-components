@@ -4,6 +4,7 @@
  */
 'use strict'
 
+import TheCautionDisconnectedDialog from './TheCautionDisconnectedDialog'
 import ThePasswordChangeForm from './ThePasswordChangeForm'
 import TheProfileEditForm from './TheProfileEditForm'
 import TheRecoverResetForm from './TheRecoverResetForm'
@@ -16,6 +17,7 @@ import TheUserImage from './TheUserImage'
 import helpers from './helpers'
 
 export {
+  TheCautionDisconnectedDialog,
   ThePasswordChangeForm,
   TheProfileEditForm,
   TheRecoverResetForm,

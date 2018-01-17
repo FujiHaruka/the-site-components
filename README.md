@@ -135,6 +135,17 @@ export default ExampleComponent
 Components
 -----------
 
+### TheCautionDisconnectedDialog
+
+
+
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `warningIcon` |   |  | `null` |
+| `reloadIcon` |   |  | `null` |
+
 ### ThePasswordChangeForm
 
 

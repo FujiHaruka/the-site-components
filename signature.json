@@ -1,4 +1,23 @@
 {
+  "TheCautionDisconnectedDialog": {
+    "description": "",
+    "displayName": "TheCautionDisconnectedDialog",
+    "methods": [],
+    "props": {
+      "warningIcon": {
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "reloadIcon": {
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      }
+    }
+  },
   "ThePasswordChangeForm": {
     "description": "",
     "displayName": "ThePasswordChangeForm",
