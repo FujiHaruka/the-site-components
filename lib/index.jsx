@@ -5,6 +5,7 @@
 'use strict'
 
 import TheCautionDisconnectedDialog from './TheCautionDisconnectedDialog'
+import TheCreateDialog from './TheCreateDialog'
 import TheOperationList from './TheOperationList'
 import TheOperationPager from './TheOperationPager'
 import ThePasswordChangeForm from './ThePasswordChangeForm'
@@ -20,6 +21,7 @@ import helpers from './helpers'
 
 export {
   TheCautionDisconnectedDialog,
+  TheCreateDialog,
   TheOperationList,
   TheOperationPager,
   ThePasswordChangeForm,

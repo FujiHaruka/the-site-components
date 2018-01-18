@@ -75,7 +75,12 @@ Usage
 'use strict'
 
 import React from 'react'
-import { TheSignInForm, TheSignUpForm, TheOperationList } from 'the-site-components'
+import {
+  TheSignInForm,
+  TheSignUpForm,
+  TheOperationList,
+  TheCreateDialog
+} from 'the-site-components'
 
 import { withForm, TheThemeStyle, TheIcon } from 'the-components'
 
@@ -132,6 +137,10 @@ class ExampleComponent extends React.Component {
 
                             }}
           />
+
+          <TheCreateDialog active={false}
+                           {...{l}}
+          />
         </div>
       </div>
 
@@ -163,6 +172,16 @@ Components
 | --- | --- | ---- | ---- |
 | `warningIcon` |   |  | `null` |
 | `reloadIcon` |   |  | `null` |
+
+### TheCreateDialog
+
+
+
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `doneTitle` |   |  | `title` |
 
 ### TheOperationList
 

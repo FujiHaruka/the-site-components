@@ -18,6 +18,19 @@
       }
     }
   },
+  "TheCreateDialog": {
+    "description": "",
+    "displayName": "TheCreateDialog",
+    "methods": [],
+    "props": {
+      "doneTitle": {
+        "defaultValue": {
+          "value": "title",
+          "computed": true
+        }
+      }
+    }
+  },
   "TheOperationList": {
     "description": "",
     "displayName": "TheOperationList",
