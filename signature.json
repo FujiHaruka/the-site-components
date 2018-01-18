@@ -18,6 +18,11 @@
       }
     }
   },
+  "TheOperationPager": {
+    "description": "",
+    "displayName": "TheOperationPager",
+    "methods": []
+  },
   "ThePasswordChangeForm": {
     "description": "",
     "displayName": "ThePasswordChangeForm",
