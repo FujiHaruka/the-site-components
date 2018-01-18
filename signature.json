@@ -18,6 +18,37 @@
       }
     }
   },
+  "TheOperationList": {
+    "description": "",
+    "displayName": "TheOperationList",
+    "methods": [],
+    "props": {
+      "isChecked": {
+        "defaultValue": {
+          "value": "() => false",
+          "computed": false
+        }
+      },
+      "isFreezed": {
+        "defaultValue": {
+          "value": "() => false",
+          "computed": false
+        }
+      },
+      "onUpdateCheck": {
+        "defaultValue": {
+          "value": "() => null",
+          "computed": false
+        }
+      },
+      "fields": {
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      }
+    }
+  },
   "TheOperationPager": {
     "description": "",
     "displayName": "TheOperationPager",
