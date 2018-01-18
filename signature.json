@@ -31,6 +31,19 @@
       }
     }
   },
+  "TheDestroyDialog": {
+    "description": "",
+    "displayName": "TheDestroyDialog",
+    "methods": [],
+    "props": {
+      "renderItem": {
+        "defaultValue": {
+          "value": "(entity) => entity.name",
+          "computed": false
+        }
+      }
+    }
+  },
   "TheOperationList": {
     "description": "",
     "displayName": "TheOperationList",

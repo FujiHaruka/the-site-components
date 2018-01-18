@@ -183,6 +183,16 @@ Components
 | --- | --- | ---- | ---- |
 | `doneTitle` |   |  | `title` |
 
+### TheDestroyDialog
+
+
+
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `renderItem` |   |  | `(entity) => entity.name` |
+
 ### TheOperationList
 
 
