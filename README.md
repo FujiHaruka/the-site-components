@@ -125,7 +125,7 @@ class ExampleComponent extends React.Component {
                             fields={{
                               id: {
                                 label: 'id',
-                                render: ({name}) => name,
+                                render: (id, {entity: {name}}) => name,
                               },
 
                             }}

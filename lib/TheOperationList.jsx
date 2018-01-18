@@ -41,10 +41,11 @@ function TheOperationList ({
                 const {label = name, sortable,} = fields[name]
                 if (sortable) {
                   return <SortableHeaderCell name={name}
+                                             key={name}
                                              {...{sort, onSort}}
                   >{label}</SortableHeaderCell>
                 } else {
-                  return <HeaderCell>{label}</HeaderCell>
+                  return <HeaderCell key={name}>{label}</HeaderCell>
                 }
               })
             }
@@ -61,7 +62,7 @@ function TheOperationList ({
               </TheCondition>
               <TheCondition unless={isFreezed(entity)}>
                 <CheckboxCell
-                  name={entity.id}
+                  name={String(entity.id)}
                   value={isChecked(entity)}
                   onUpdate={onUpdateCheck}
                 />
