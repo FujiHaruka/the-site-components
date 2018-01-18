@@ -75,7 +75,7 @@ Usage
 'use strict'
 
 import React from 'react'
-import { TheSignInForm, TheSignUpForm } from 'the-site-components'
+import { TheSignInForm, TheSignUpForm, TheOperationList } from 'the-site-components'
 
 import { withForm, TheThemeStyle, TheIcon } from 'the-components'
 
@@ -115,6 +115,21 @@ class ExampleComponent extends React.Component {
           />
         </div>
         <hr/>
+
+        <h1>TheOperationList</h1>
+
+        <div>
+
+          <TheOperationList entities={[{id: 1, name: 'v1'}, {id: 2, name: 'v2'}]}
+                            {...{l}}
+                            fields={{
+                              id: {
+                                render: ({name}) => name,
+                              },
+
+                            }}
+          />
+        </div>
       </div>
 
     )
@@ -145,6 +160,19 @@ Components
 | --- | --- | ---- | ---- |
 | `warningIcon` |   |  | `null` |
 | `reloadIcon` |   |  | `null` |
+
+### TheOperationList
+
+
+
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `isChecked` |   |  | `() => false` |
+| `isFreezed` |   |  | `() => false` |
+| `onUpdateCheck` |   |  | `() => null` |
+| `fields` |   |  | `{}` |
 
 ### TheOperationPager
 

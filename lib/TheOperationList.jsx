@@ -13,6 +13,7 @@ const {
   Row,
   HeaderCell,
   SortableHeaderCell,
+  CheckboxCell,
   Cell,
 } = TheTable
 
@@ -37,7 +38,7 @@ function TheOperationList ({
             <HeaderCell/>
             {
               Object.keys(fields).map((name, i) => {
-                const {label, sortable,} = fields[name]
+                const {label = name, sortable,} = fields[name]
                 if (sortable) {
                   return <SortableHeaderCell name={name}
                                              {...{sort, onSort}}
@@ -67,10 +68,10 @@ function TheOperationList ({
               </TheCondition>
               {
                 Object.keys(fields).map((name, i) => {
-                  const field = fields[name]
+                  const {render} = fields[name]
                   const value = entity[name]
                   return (
-                    <Cell key={name}>{field.render(value, {entity, i})}</Cell>
+                    <Cell key={name}>{render ? render(value, {entity, i}) : value}</Cell>
                   )
                 })
               }
