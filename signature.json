@@ -44,6 +44,19 @@
       }
     }
   },
+  "TheFBLoginButton": {
+    "description": "",
+    "displayName": "TheFBLoginButton",
+    "methods": [],
+    "props": {
+      "ready": {
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      }
+    }
+  },
   "TheOperationList": {
     "description": "",
     "displayName": "TheOperationList",

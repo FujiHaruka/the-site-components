@@ -193,6 +193,16 @@ Components
 | --- | --- | ---- | ---- |
 | `renderItem` |   |  | `(entity) => entity.name` |
 
+### TheFBLoginButton
+
+
+
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `ready` |   |  | `false` |
+
 ### TheOperationList
 
 
