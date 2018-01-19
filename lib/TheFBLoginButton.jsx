@@ -15,6 +15,7 @@ function TheFBLoginButton ({
                              fbIcon,
                              fbThemeColor,
                              styles,
+                             callbackName = 'onFBLoginForFBLoginButton',
                            }) {
   if (continueAs) {
     const width = 248
@@ -30,7 +31,7 @@ function TheFBLoginButton ({
      data-auto-logout-link="false"
      data-use-continue-as="true"
      data-width="${width}px"
-     data-onlogin="onFBLoginForFBLoginButton">
+     data-onlogin="${callbackName}">
 </div>
 `
         }}>

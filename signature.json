@@ -54,6 +54,12 @@
           "value": "false",
           "computed": false
         }
+      },
+      "callbackName": {
+        "defaultValue": {
+          "value": "'onFBLoginForFBLoginButton'",
+          "computed": false
+        }
       }
     }
   },

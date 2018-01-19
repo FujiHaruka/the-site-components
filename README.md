@@ -202,6 +202,7 @@ Components
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
 | `ready` |   |  | `false` |
+| `callbackName` |   |  | `'onFBLoginForFBLoginButton'` |
 
 ### TheOperationList
 
