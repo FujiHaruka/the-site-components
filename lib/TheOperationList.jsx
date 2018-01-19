@@ -6,6 +6,7 @@
 import React from 'react'
 import c from 'classnames'
 import { TheTable, TheCondition, } from 'the-components'
+import { retrieve } from 'asobj'
 
 const {
   Head,
@@ -70,7 +71,7 @@ function TheOperationList ({
               {
                 Object.keys(fields).map((name, i) => {
                   const {render} = fields[name]
-                  const value = entity[name]
+                  const value = retrieve(entity, name)
                   return (
                     <Cell key={name}>{render ? render(value, {entity, i}) : value}</Cell>
                   )

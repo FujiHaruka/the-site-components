@@ -1,34 +1,17 @@
 {
   "name": "the-site-components",
-  "version": "2.2.2",
   "description": "Components for the-site",
-  "main": "shim",
-  "scripts": {
-    "build": "the-script-build",
-    "doc": "the-script-doc",
-    "prepare": "the-script-build && the-script-doc",
-    "release": "the-script-release -y",
-    "share": "the-script-share",
-    "test": "the-script-test",
-    "update": "the-script-update",
-    "watch": "the-script-build -w"
-  },
-  "repository": "the-labo/the-site-components",
-  "keywords": [
-    "the",
-    "react-component"
-  ],
+  "version": "2.2.2",
   "author": {
     "name": "okunishinishi",
     "email": "okunishinishi@gmail.com",
     "url": "undefined"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/the-labo/the-site-components/issues"
   },
-  "homepage": "https://github.com/the-labo/the-site-components#readme",
   "dependencies": {
+    "asobj": "^2.0.4",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "the-component-util": "^2.1.2",
@@ -39,8 +22,8 @@
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
     "the-component-demo": "^4.0.6",
-    "the-components": "^5.0.16",
-    "the-script-build": "^2.0.3",
+    "the-components": "^5.0.18",
+    "the-script-build": "^2.0.4",
     "the-script-doc": "^1.0.2",
     "the-script-release": "^1.0.6",
     "the-script-share": "^1.0.5",
@@ -48,13 +31,31 @@
     "the-script-update": "^1.0.0",
     "the-templates": "^2.3.1"
   },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=4"
+  },
+  "homepage": "https://github.com/the-labo/the-site-components#readme",
+  "keywords": [
+    "react-component",
+    "the"
+  ],
+  "license": "MIT",
+  "main": "shim",
   "peerDependencies": {
     "react": ">=16",
     "react-dom": ">=16",
     "the-components": ">=3"
   },
-  "engines": {
-    "node": ">=8",
-    "npm": ">=4"
+  "repository": "the-labo/the-site-components",
+  "scripts": {
+    "build": "the-script-build",
+    "doc": "the-script-doc",
+    "prepare": "the-script-build && the-script-doc",
+    "release": "the-script-release -y",
+    "share": "the-script-share",
+    "test": "the-script-test",
+    "update": "the-script-update",
+    "watch": "the-script-build -w"
   }
 }
