@@ -43,7 +43,8 @@ function TheOperationList ({
                 if (sortable) {
                   return <SortableHeaderCell name={name}
                                              key={name}
-                                             {...{sort, onSort}}
+                                             {...{onSort}}
+                                             sort={[].concat(sort)[0]}
                   >{label}</SortableHeaderCell>
                 } else {
                   return <HeaderCell key={name}>{label}</HeaderCell>

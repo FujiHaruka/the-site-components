@@ -11,7 +11,7 @@
     "url": "https://github.com/the-labo/the-site-components/issues"
   },
   "dependencies": {
-    "asobj": "^2.0.4",
+    "asobj": "^2.0.8",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "the-component-util": "^2.1.2",
