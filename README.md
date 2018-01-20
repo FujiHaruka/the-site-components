@@ -204,6 +204,16 @@ Components
 | `ready` |   |  | `false` |
 | `callbackName` |   |  | `'onFBLoginForFBLoginButton'` |
 
+### TheOperationDialog
+
+
+
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `renderItem` |   |  | `({name}) => name` |
+
 ### TheOperationList
 
 

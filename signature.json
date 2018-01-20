@@ -63,6 +63,19 @@
       }
     }
   },
+  "TheOperationDialog": {
+    "description": "",
+    "displayName": "TheOperationDialog",
+    "methods": [],
+    "props": {
+      "renderItem": {
+        "defaultValue": {
+          "value": "({name}) => name",
+          "computed": false
+        }
+      }
+    }
+  },
   "TheOperationList": {
     "description": "",
     "displayName": "TheOperationList",
