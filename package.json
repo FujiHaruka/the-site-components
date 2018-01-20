@@ -1,7 +1,7 @@
 {
   "name": "the-site-components",
   "description": "Components for the-site",
-  "version": "2.2.6",
+  "version": "2.3.0",
   "author": {
     "name": "okunishinishi",
     "email": "okunishinishi@gmail.com",
@@ -23,14 +23,14 @@
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
     "the-component-demo": "^4.0.6",
-    "the-components": "^5.0.18",
+    "the-components": "^5.0.19",
     "the-script-build": "^2.0.4",
     "the-script-doc": "^1.0.2",
     "the-script-release": "^1.0.6",
     "the-script-share": "^1.0.5",
     "the-script-test": "^2.0.1",
     "the-script-update": "^1.0.0",
-    "the-templates": "^2.3.1"
+    "the-templates": "^2.4.1"
   },
   "engines": {
     "node": ">=8",

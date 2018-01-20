@@ -274,6 +274,11 @@ Components
 | `nameParser` |   |  | `userNameParser` |
 | `step` |   |  | `0` |
 
+### TheSiteToasts
+
+
+
+
 ### TheUserCreateForm
 
 

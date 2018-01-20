@@ -170,6 +170,11 @@
       }
     }
   },
+  "TheSiteToasts": {
+    "description": "",
+    "displayName": "TheSiteToasts",
+    "methods": []
+  },
   "TheUserCreateForm": {
     "description": "",
     "displayName": "TheUserCreateForm",
