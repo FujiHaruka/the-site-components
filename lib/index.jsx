@@ -8,6 +8,7 @@ import TheCautionDisconnectedDialog from './TheCautionDisconnectedDialog'
 import TheCreateDialog from './TheCreateDialog'
 import TheDestroyDialog from './TheDestroyDialog'
 import TheFBLoginButton from './TheFBLoginButton'
+import TheLocaleForm from './TheLocaleForm'
 import TheOperationDialog from './TheOperationDialog'
 import TheOperationList from './TheOperationList'
 import TheOperationPager from './TheOperationPager'
@@ -28,6 +29,7 @@ export {
   TheCreateDialog,
   TheDestroyDialog,
   TheFBLoginButton,
+  TheLocaleForm,
   TheOperationDialog,
   TheOperationList,
   TheOperationPager,

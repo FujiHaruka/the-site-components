@@ -204,6 +204,17 @@ Components
 | `ready` |   |  | `false` |
 | `callbackName` |   |  | `'onFBLoginForFBLoginButton'` |
 
+### TheLocaleForm
+
+
+
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `name` |   |  | `'locale'` |
+| `icon` |   |  | `'fas fa-globe'` |
+
 ### TheOperationDialog
 
 

@@ -63,6 +63,25 @@
       }
     }
   },
+  "TheLocaleForm": {
+    "description": "",
+    "displayName": "TheLocaleForm",
+    "methods": [],
+    "props": {
+      "name": {
+        "defaultValue": {
+          "value": "'locale'",
+          "computed": false
+        }
+      },
+      "icon": {
+        "defaultValue": {
+          "value": "'fas fa-globe'",
+          "computed": false
+        }
+      }
+    }
+  },
   "TheOperationDialog": {
     "description": "",
     "displayName": "TheOperationDialog",
