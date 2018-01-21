@@ -14,7 +14,7 @@ function TheCreateDialog ({
                             onClose,
                             title,
                             doneTitle = title,
-                            cildren,
+                            children,
                             result
                           }) {
   if (!active) {
@@ -38,7 +38,7 @@ function TheCreateDialog ({
       title={title}
       {...{spinning, onClose}}
     >
-      {cildren}
+      {children}
     </TheDialog>
   )
 }
