@@ -53,7 +53,7 @@ function TheProfileEditForm ({
       </Field>
       <Field>
         <Label {...getLabelAttributesOf('image')}>
-          {l('labels.USER_PROFILE_IMAGE')}
+          {l('labels.USER_IMAGE')}
         </Label>
         <Value>
           <Upload multiple={false}
