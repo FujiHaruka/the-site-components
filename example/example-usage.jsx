@@ -5,7 +5,7 @@ import {
   TheSignInForm,
   TheSignUpForm,
   TheOperationList,
-  TheCreateDialog
+  TheCreateDialog,
 } from 'the-site-components'
 
 import { withForm, TheThemeStyle, TheIcon } from 'the-components'

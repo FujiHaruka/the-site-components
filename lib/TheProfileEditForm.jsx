@@ -6,7 +6,7 @@
 import React from 'react'
 import { TheForm, TheInput, TheButton } from 'the-components'
 
-const {Text} = TheInput
+const {Text, Upload} = TheInput
 const {Field, Label, Value} = TheForm
 
 function TheProfileEditForm ({
@@ -49,6 +49,15 @@ function TheProfileEditForm ({
                 pattern={Text.EMAIL_PATTERN}
                 patternWarning={l('warnings.SEEMS_INVALID_EMAIL')}
                 {...getInputAttributesOf('email')}/>
+        </Value>
+      </Field>
+      <Field>
+        <Label {...getLabelAttributesOf('image')}>
+          {l('labels.USER_PROFILE_IMAGE')}
+        </Label>
+        <Value>
+          <Upload multiple={false}
+                  {...getInputAttributesOf('image')}/>
         </Value>
       </Field>
       {children}
