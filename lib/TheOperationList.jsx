@@ -19,7 +19,7 @@ const {
 } = TheTable
 
 function TheOperationList ({
-                             entities,
+                             entities = [],
                              className,
                              l,
                              sort,

@@ -233,6 +233,7 @@ Components
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
+| `entities` |   |  | `[]` |
 | `isChecked` |   |  | `() => false` |
 | `isFreezed` |   |  | `() => false` |
 | `onUpdateCheck` |   |  | `() => null` |
