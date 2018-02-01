@@ -50,7 +50,7 @@ function TheSigninForm ({
       {children}
       <Field>
         <TheButton wide primary {...getSubmitAttributes()}>
-          {l('buttons.DO_SIGNIN')}
+          {l('buttons.DO_SIGN_IN')}
         </TheButton>
       </Field>
     </TheForm>

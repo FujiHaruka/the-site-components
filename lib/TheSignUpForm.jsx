@@ -32,7 +32,7 @@ function TheSignUpForm ({
     >
       <TheStep {...{step, onStep}}
                onSubmit={onSubmit}
-               submitText={l('buttons.DO_SIGNUP')}
+               submitText={l('buttons.DO_SIGN_UP')}
                isSubmit={step === 1}
       >
         <TheStep.Content>
