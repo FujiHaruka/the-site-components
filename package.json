@@ -23,14 +23,14 @@
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
     "the-component-demo": "^4.0.6",
-    "the-components": "^5.0.26",
+    "the-components": "^5.0.27",
     "the-script-build": "^2.1.0",
     "the-script-doc": "^1.0.2",
     "the-script-release": "^1.0.6",
     "the-script-share": "^1.0.5",
     "the-script-test": "^2.0.1",
     "the-script-update": "^1.0.0",
-    "the-templates": "^2.5.4"
+    "the-templates": "^2.5.5"
   },
   "engines": {
     "node": ">=8",

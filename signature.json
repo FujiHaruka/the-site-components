@@ -167,6 +167,12 @@
           "value": "'q'",
           "computed": false
         }
+      },
+      "autoFocus": {
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
       }
     }
   },

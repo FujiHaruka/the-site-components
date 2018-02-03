@@ -273,6 +273,7 @@ Components
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
 | `name` |   |  | `'q'` |
+| `autoFocus` |   |  | `false` |
 
 ### TheSigninForm
 

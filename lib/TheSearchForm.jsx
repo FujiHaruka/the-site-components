@@ -11,6 +11,7 @@ function TheSearchForm ({
                           l,
                           className,
                           name = 'q',
+                          autoFocus = false,
                           placeholder,
                           onSubmit,
                           getInputAttributesOf,
@@ -26,6 +27,7 @@ function TheSearchForm ({
     >
       <TheInput.Text {...getInputAttributesOf(name)}
                      placeholder={placeholder}
+                     autoFocus={autoFocus}
                      onEnter={onSubmit}
       />
       <TheButton primary {...getSubmitAttributes()}>
