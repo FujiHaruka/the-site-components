@@ -124,6 +124,12 @@
           "computed": false
         }
       },
+      "keys": {
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
       "fields": {
         "defaultValue": {
           "value": "{}",

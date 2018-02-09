@@ -237,6 +237,7 @@ Components
 | `isChecked` |   |  | `() => false` |
 | `isFreezed` |   |  | `() => false` |
 | `onUpdateCheck` |   |  | `() => null` |
+| `keys` |   |  | `null` |
 | `fields` |   |  | `{}` |
 
 ### TheOperationPager

@@ -27,6 +27,7 @@ function TheOperationList ({
                              isChecked = () => false,
                              isFreezed = () => false,
                              onUpdateCheck = () => null,
+                             keys = null,
                              fields = {},
                            }) {
   return (
@@ -38,7 +39,7 @@ function TheOperationList ({
           <Row>
             <HeaderCell/>
             {
-              Object.keys(fields).map((name, i) => {
+              (keys || Object.keys(fields)).map((name, i) => {
                 const {label = name, sortable,} = fields[name]
                 if (sortable) {
                   return <SortableHeaderCell name={name}
@@ -70,7 +71,7 @@ function TheOperationList ({
                 />
               </TheCondition>
               {
-                Object.keys(fields).map((name, i) => {
+                (keys || Object.keys(fields)).map((name, i) => {
                   const {render} = fields[name]
                   const value = retrieve(entity, name)
                   return (
