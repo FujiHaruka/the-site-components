@@ -4,36 +4,36 @@
 'use strict'
 
 import React from 'react'
-import { TheStep, TheForm, TheInput, TheCondition } from 'the-components'
+import { TheCondition, TheForm, TheInput, TheStep } from 'the-components'
 import { userNameParser } from './helpers'
 
-const {Text, Password} = TheInput
+const {Password, Text} = TheInput
 const {Field, Label, Value} = TheForm
 
 function TheSignUpForm ({
-                          l,
+                          children,
+                          getFormAttributes,
                           getInputAttributesOf,
                           getLabelAttributesOf,
-                          getFormAttributes,
                           getSubmitAttributes,
-                          required = ['name', 'password', 'profile.email'],
-                          children,
+                          l,
                           nameParser = userNameParser,
-                          step = 0,
                           onStep,
-                          onSubmit
+                          onSubmit,
+                          required = ['name', 'password', 'profile.email'],
+                          step = 0,
                         }) {
   const toStepZero = () => onStep(0)
   const toStepOne = () => onStep(1)
   return (
     <TheForm {...getFormAttributes()}
-             required={required}
              autoComplete='off'
+             required={required}
     >
-      <TheStep {...{step, onStep}}
+      <TheStep {...{onStep, step}}
+               isSubmit={step === 1}
                onSubmit={onSubmit}
                submitText={l('buttons.DO_SIGN_UP')}
-               isSubmit={step === 1}
       >
         <TheStep.Content>
           <Field>
@@ -44,10 +44,10 @@ function TheSignUpForm ({
               <Text placeholder={l('placeholders.USER_EMAIL')}
                     type='email'
                     {...getInputAttributesOf('profile.email')}
+                    onEnter={toStepOne}
+                    onFocus={toStepZero}
                     pattern={Text.EMAIL_PATTERN}
                     patternWarning={l('warnings.SEEMS_INVALID_EMAIL')}
-                    onFocus={toStepZero}
-                    onEnter={toStepOne}
               />
             </Value>
           </Field>
@@ -83,8 +83,8 @@ function TheSignUpForm ({
               {l('labels.USER_PROFILE_NAME')}
             </Label>
             <Value>
-              <Text placeholder={l('placeholders.USER_PROFILE_NAME')}
-                    onFocus={toStepOne}
+              <Text onFocus={toStepOne}
+                    placeholder={l('placeholders.USER_PROFILE_NAME')}
                     {...getInputAttributesOf('profile.name')}/>
             </Value>
           </Field>
@@ -95,8 +95,8 @@ function TheSignUpForm ({
             </Label>
             <Value>
               <Password {...getInputAttributesOf('password')}
-                        onFocus={toStepOne}
                         autoComplete='new-password'
+                        onFocus={toStepOne}
               />
             </Value>
           </Field>

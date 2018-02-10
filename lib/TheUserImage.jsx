@@ -3,14 +3,14 @@
  */
 'use strict'
 
-import React from 'react'
 import c from 'classnames'
+import React from 'react'
 import { TheImage } from 'the-components'
 
 function TheUserImage ({
                          className,
+                         size = 48,
                          user,
-                         size = 48
                        }) {
   if (!user) {
     return null
@@ -20,12 +20,12 @@ function TheUserImage ({
     return null
   }
   return (
-    <TheImage className={c(className)}
-              alt={displayName}
-              width={size}
+    <TheImage alt={displayName}
+              className={c(className)}
               height={size}
+              scale='fit'
               src={displayImage}
-              scale={'fit'}
+              width={size}
     />
   )
 }

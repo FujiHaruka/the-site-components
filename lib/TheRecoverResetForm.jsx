@@ -4,18 +4,18 @@
 'use strict'
 
 import React from 'react'
-import { TheForm, TheInput, TheButton } from 'the-components'
+import { TheButton, TheForm, TheInput } from 'the-components'
 
 const {Password} = TheInput
 const {Field, Label, Value} = TheForm
 
 function TheRecoverResetForm ({
-                                l,
+                                getFormAttributes,
                                 getInputAttributesOf,
                                 getLabelAttributesOf,
-                                getFormAttributes,
                                 getSubmitAttributes,
-                                onSubmit
+                                l,
+                                onSubmit,
                               }) {
 
   return (
@@ -34,7 +34,7 @@ function TheRecoverResetForm ({
       </Field>
       <br/>
       <Field>
-        <TheButton wide primary {...getSubmitAttributes()}>
+        <TheButton primary wide {...getSubmitAttributes()}>
           {l('buttons.DO_UPDATE')}
         </TheButton>
       </Field>

@@ -3,47 +3,47 @@
  */
 'use strict'
 
-import React from 'react'
-import c from 'classnames'
-import { TheTable, TheCondition, } from 'the-components'
 import { retrieve } from 'asobj'
+import c from 'classnames'
+import React from 'react'
+import { TheCondition, TheTable } from 'the-components'
 
 const {
-  Head,
   Body,
-  Row,
-  HeaderCell,
-  SortableHeaderCell,
-  CheckboxCell,
   Cell,
+  CheckboxCell,
+  Head,
+  HeaderCell,
+  Row,
+  SortableHeaderCell,
 } = TheTable
 
 function TheOperationList ({
-                             entities = [],
                              className,
-                             l,
-                             sort,
-                             onSort,
+                             entities = [],
+                             fields = {},
                              isChecked = () => false,
                              isFreezed = () => false,
-                             onUpdateCheck = () => null,
                              keys = null,
-                             fields = {},
+                             l,
+                             onSort,
+                             onUpdateCheck = () => null,
+                             sort,
                            }) {
   return (
     <div className={c(className)}>
-      <TheTable empty={entities && entities.length === 0}
-                alt={l('alt.LIST_EMPTY')}
+      <TheTable alt={l('alt.LIST_EMPTY')}
+                empty={entities && entities.length === 0}
       >
         <Head>
           <Row>
             <HeaderCell/>
             {
               (keys || Object.keys(fields)).map((name, i) => {
-                const {label = name, sortable,} = fields[name]
+                const {label = name, sortable} = fields[name]
                 if (sortable) {
-                  return <SortableHeaderCell name={name}
-                                             key={name}
+                  return <SortableHeaderCell key={name}
+                                             name={name}
                                              {...{onSort}}
                                              sort={[].concat(sort)[0]}
                   >{label}</SortableHeaderCell>
@@ -57,8 +57,8 @@ function TheOperationList ({
         <Body>
         {
           entities.map((entity) => (
-            <Row selected={isChecked(entity)}
-                 key={entity.id}
+            <Row key={entity.id}
+                 selected={isChecked(entity)}
             >
               <TheCondition if={isFreezed(entity)}>
                 <Cell/>
@@ -66,8 +66,8 @@ function TheOperationList ({
               <TheCondition unless={isFreezed(entity)}>
                 <CheckboxCell
                   name={String(entity.id)}
-                  value={isChecked(entity)}
                   onUpdate={onUpdateCheck}
+                  value={isChecked(entity)}
                 />
               </TheCondition>
               {

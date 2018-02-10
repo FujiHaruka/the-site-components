@@ -4,13 +4,13 @@
 'use strict'
 
 import React from 'react'
-import { ThePager, TheCondition } from 'the-components'
+import { TheCondition, ThePager } from 'the-components'
 
 function TheOperationPager ({
-                              l,
-                              showCounts,
                               counts,
-                              onPage
+                              l,
+                              onPage,
+                              showCounts,
                             }) {
   return (
     <ThePager.Row>
@@ -18,7 +18,7 @@ function TheOperationPager ({
                          onUpdate={onPage}
       />
       <TheCondition if={showCounts}>
-        <ThePager.Counts {...{l, counts}}/>
+        <ThePager.Counts {...{counts, l}}/>
       </TheCondition>
     </ThePager.Row>
   )

@@ -4,27 +4,27 @@
 'use strict'
 
 import React from 'react'
-import { TheForm, TheInput, TheButton } from 'the-components'
+import { TheButton, TheForm, TheInput } from 'the-components'
 
 const {Text} = TheInput
 
 function TheRecoverSendForm ({
-                               l,
-                               onSubmit,
+                               getFormAttributes,
                                getInputAttributesOf,
                                getLabelAttributesOf,
-                               getFormAttributes,
-                               getSubmitAttributes
+                               getSubmitAttributes,
+                               l,
+                               onSubmit,
                              }) {
   return (
     <TheForm inline
              {...getFormAttributes()}
-             required={['email']}
              autoComplete='off'
+             required={['email']}
     >
-      <Text placeholder={l('placeholders.USER_EMAIL')}
-            autoFocus
+      <Text autoFocus
             onEnter={onSubmit}
+            placeholder={l('placeholders.USER_EMAIL')}
             {...getInputAttributesOf('email')}/>
       <TheButton primary {...getSubmitAttributes()}>
         {l('buttons.DO_SEND')}

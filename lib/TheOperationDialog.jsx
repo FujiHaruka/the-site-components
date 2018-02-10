@@ -5,25 +5,25 @@
 
 import React from 'react'
 import {
+  TheInfo,
   TheOkDialog,
   TheYesNoDialog,
-  TheInfo,
 } from 'the-components'
 
 function TheOperationDialog ({
-                               l,
                                active,
                                done,
-                               spinning,
+                               doneLead,
+                               doneTitle,
+                               entities,
+                               l,
+                               lead,
                                onClose,
                                onYes,
-                               title,
-                               lead,
-                               doneTitle,
-                               doneLead,
-                               result,
-                               entities,
                                renderItem = ({name}) => name,
+                               result,
+                               spinning,
+                               title,
                              }) {
   if (!active) {
     return null
@@ -31,26 +31,26 @@ function TheOperationDialog ({
   if (done) {
     return (
       <TheOkDialog
+        hideCloseButton
+        lead={doneLead}
+        onClose={onClose}
         present
         title={doneTitle}
-        lead={doneLead}
-        hideCloseButton
-        onClose={onClose}
       >
         <TheInfo data={result}/>
       </TheOkDialog>
     )
   }
   return (
-    <TheYesNoDialog present
+    <TheYesNoDialog lead={lead}
+                    noText={l('buttons.DO_CANCEL')}
+                    onClose={onClose}
+                    onNo={onClose}
+                    onYes={onYes}
+                    present
+                    spinning={spinning}
                     title={title}
                     yesText={l('buttons.DO_EXECUTE')}
-                    noText={l('buttons.DO_CANCEL')}
-                    lead={lead}
-                    spinning={spinning}
-                    onNo={onClose}
-                    onClose={onClose}
-                    onYes={onYes}
     >
       <ul>
         {

@@ -4,19 +4,19 @@
 'use strict'
 
 import React from 'react'
-import { TheForm, TheInput, TheButton } from 'the-components'
+import { TheButton, TheForm, TheInput } from 'the-components'
 
 const {Password} = TheInput
 const {Field, Label, Value} = TheForm
 
 function ThePasswordChangeForm ({
-                                  l,
-                                  user,
+                                  getFormAttributes,
                                   getInputAttributesOf,
                                   getLabelAttributesOf,
-                                  getFormAttributes,
                                   getSubmitAttributes,
-                                  onSubmit
+                                  l,
+                                  onSubmit,
+                                  user,
                                 }) {
   return (
     <TheForm {...getFormAttributes()}
@@ -35,15 +35,15 @@ function ThePasswordChangeForm ({
           {l('labels.NEW_PASSWORD')}
         </Label>
         <Value>
-          <Password placeholder={l('placeholders.NEW_PASSWORD')}
-                    autoFocus
+          <Password autoFocus
                     onEnter={onSubmit}
+                    placeholder={l('placeholders.NEW_PASSWORD')}
                     {...getInputAttributesOf('password')}/>
         </Value>
       </Field>
       <br/>
       <Field>
-        <TheButton wide primary {...getSubmitAttributes()}>
+        <TheButton primary wide {...getSubmitAttributes()}>
           {l('buttons.DO_UPDATE')}
         </TheButton>
       </Field>

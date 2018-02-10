@@ -4,19 +4,19 @@
 'use strict'
 
 import React from 'react'
-import { TheForm, TheInput, TheButton } from 'the-components'
+import { TheButton, TheForm, TheInput } from 'the-components'
 
 const {Text, Upload} = TheInput
 const {Field, Label, Value} = TheForm
 
 function TheProfileEditForm ({
-                               l,
-                               user,
+                               children,
+                               getFormAttributes,
                                getInputAttributesOf,
                                getLabelAttributesOf,
-                               getFormAttributes,
                                getSubmitAttributes,
-                               children
+                               l,
+                               user,
                              }) {
   return (
     <TheForm {...getFormAttributes()}
@@ -44,10 +44,10 @@ function TheProfileEditForm ({
           {l('labels.USER_EMAIL')}
         </Label>
         <Value>
-          <Text placeholder={l('placeholders.USER_EMAIL')}
-                type='email'
-                pattern={Text.EMAIL_PATTERN}
+          <Text pattern={Text.EMAIL_PATTERN}
                 patternWarning={l('warnings.SEEMS_INVALID_EMAIL')}
+                placeholder={l('placeholders.USER_EMAIL')}
+                type='email'
                 {...getInputAttributesOf('email')}/>
         </Value>
       </Field>
@@ -63,7 +63,7 @@ function TheProfileEditForm ({
       {children}
       <br/>
       <Field>
-        <TheButton wide primary {...getSubmitAttributes()}>
+        <TheButton primary wide {...getSubmitAttributes()}>
           {l('buttons.DO_UPDATE')}
         </TheButton>
       </Field>

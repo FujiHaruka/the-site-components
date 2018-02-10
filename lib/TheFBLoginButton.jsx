@@ -4,18 +4,18 @@
 'use strict'
 
 import React from 'react'
-import { TheSpin, TheButton, TheCondition } from 'the-components'
+import { TheButton, TheCondition, TheSpin } from 'the-components'
 
 function TheFBLoginButton ({
-                             l,
-                             ready = false,
-                             spinning,
-                             onLogin,
+                             callbackName = 'onFBLoginForFBLoginButton',
                              continueAs,
                              fbIcon,
                              fbThemeColor,
+                             l,
+                             onLogin,
+                             ready = false,
+                             spinning,
                              styles,
-                             callbackName = 'onFBLoginForFBLoginButton',
                            }) {
   if (continueAs) {
     const width = 248
@@ -33,12 +33,12 @@ function TheFBLoginButton ({
      data-width="${width}px"
      data-onlogin="${callbackName}">
 </div>
-`
+`,
         }}>
         </div>
         <TheCondition unless={ready}>
           <div className={styles.alt}
-               style={{width: width, background: fbThemeColor}}
+               style={{background: fbThemeColor, width: width}}
           >
             <TheSpin cover enabled/>
           </div>
@@ -48,10 +48,10 @@ function TheFBLoginButton ({
   }
   return (
     <TheButton className={styles.self}
+               color={fbThemeColor}
+               largeIcon={fbIcon}
                onClick={onLogin}
                spinning={spinning}
-               largeIcon={fbIcon}
-               color={fbThemeColor}
     >
       {l('buttons.DO_LOGIN_FACEBOOK')}
     </TheButton>

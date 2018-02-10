@@ -1,17 +1,17 @@
 'use strict'
 
-import React from 'react'
 import c from 'classnames'
-import { TheInput, TheForm, TheIcon } from 'the-components'
+import React from 'react'
+import { TheForm, TheIcon, TheInput } from 'the-components'
 
 function TheLocaleForm ({
                           className,
                           getFormAttributes,
                           getInputAttributesOf,
-                          name = 'locale',
                           icon = 'fas fa-globe',
-                          value,
+                          name = 'locale',
                           options,
+                          value,
                         }) {
   return (
     <TheForm inline
@@ -26,7 +26,7 @@ function TheLocaleForm ({
                              <span style={{whiteSpace: 'nowrap'}}>
                                <TheIcon className={icon}/>{options[name]}
                              </span>
-                           )
+                           ),
                          }))
                        )}
       />

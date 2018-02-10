@@ -170,8 +170,8 @@ Components
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
-| `warningIcon` |   |  | `null` |
 | `reloadIcon` |   |  | `null` |
+| `warningIcon` |   |  | `null` |
 
 ### TheCreateDialog
 
@@ -201,8 +201,8 @@ Components
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
-| `ready` |   |  | `false` |
 | `callbackName` |   |  | `'onFBLoginForFBLoginButton'` |
+| `ready` |   |  | `false` |
 
 ### TheLocaleForm
 
@@ -212,8 +212,8 @@ Components
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
-| `name` |   |  | `'locale'` |
 | `icon` |   |  | `'fas fa-globe'` |
+| `name` |   |  | `'locale'` |
 
 ### TheOperationDialog
 
@@ -234,11 +234,11 @@ Components
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
 | `entities` |   |  | `[]` |
+| `fields` |   |  | `{}` |
 | `isChecked` |   |  | `() => false` |
 | `isFreezed` |   |  | `() => false` |
-| `onUpdateCheck` |   |  | `() => null` |
 | `keys` |   |  | `null` |
-| `fields` |   |  | `{}` |
+| `onUpdateCheck` |   |  | `() => null` |
 
 ### TheOperationPager
 
@@ -273,8 +273,8 @@ Components
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
-| `name` |   |  | `'q'` |
 | `autoFocus` |   |  | `false` |
+| `name` |   |  | `'q'` |
 
 ### TheSigninForm
 
@@ -294,8 +294,8 @@ Components
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
-| `required` |   |  | `['name', 'password', 'profile.email']` |
 | `nameParser` |   |  | `userNameParser` |
+| `required` |   |  | `['name', 'password', 'profile.email']` |
 | `step` |   |  | `0` |
 
 ### TheSiteToasts

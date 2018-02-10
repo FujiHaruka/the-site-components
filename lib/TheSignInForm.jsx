@@ -4,21 +4,21 @@
 'use strict'
 
 import React from 'react'
-import { TheForm, TheInput, TheButton } from 'the-components'
+import { TheButton, TheForm, TheInput } from 'the-components'
 import { userNameParser } from './helpers'
 
-const {Text, Password} = TheInput
+const {Password, Text} = TheInput
 const {Field, Label, Value} = TheForm
 
 function TheSigninForm ({
-                          l,
+                          children,
+                          getFormAttributes,
                           getInputAttributesOf,
                           getLabelAttributesOf,
-                          getFormAttributes,
                           getSubmitAttributes,
+                          l,
+                          nameParser = userNameParser,
                           onSubmit,
-                          children,
-                          nameParser = userNameParser
                         }) {
   return (
     <TheForm {...getFormAttributes()}
@@ -49,7 +49,7 @@ function TheSigninForm ({
       </Field>
       {children}
       <Field>
-        <TheButton wide primary {...getSubmitAttributes()}>
+        <TheButton primary wide {...getSubmitAttributes()}>
           {l('buttons.DO_SIGN_IN')}
         </TheButton>
       </Field>

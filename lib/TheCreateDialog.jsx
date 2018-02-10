@@ -7,25 +7,25 @@ import React from 'react'
 import { TheDialog, TheInfo, TheOkDialog } from 'the-components'
 
 function TheCreateDialog ({
-                            l,
                             active,
-                            spinning,
-                            done,
-                            onClose,
-                            title,
-                            doneTitle = title,
                             children,
-                            result
+                            done,
+                            doneTitle = title,
+                            l,
+                            onClose,
+                            result,
+                            spinning,
+                            title,
                           }) {
   if (!active) {
     return null
   }
   if (done) {
     return (
-      <TheOkDialog present
+      <TheOkDialog hideCloseButton
+                   present
                    title={doneTitle}
-                   hideCloseButton
-                   {...{spinning, onClose}}
+                   {...{onClose, spinning}}
       >
         <TheInfo data={result}
         />
@@ -36,7 +36,7 @@ function TheCreateDialog ({
     <TheDialog
       present
       title={title}
-      {...{spinning, onClose}}
+      {...{onClose, spinning}}
     >
       {children}
     </TheDialog>

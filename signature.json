@@ -4,13 +4,13 @@
     "displayName": "TheCautionDisconnectedDialog",
     "methods": [],
     "props": {
-      "warningIcon": {
+      "reloadIcon": {
         "defaultValue": {
           "value": "null",
           "computed": false
         }
       },
-      "reloadIcon": {
+      "warningIcon": {
         "defaultValue": {
           "value": "null",
           "computed": false
@@ -49,15 +49,15 @@
     "displayName": "TheFBLoginButton",
     "methods": [],
     "props": {
-      "ready": {
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
-      },
       "callbackName": {
         "defaultValue": {
           "value": "'onFBLoginForFBLoginButton'",
+          "computed": false
+        }
+      },
+      "ready": {
+        "defaultValue": {
+          "value": "false",
           "computed": false
         }
       }
@@ -68,15 +68,15 @@
     "displayName": "TheLocaleForm",
     "methods": [],
     "props": {
-      "name": {
-        "defaultValue": {
-          "value": "'locale'",
-          "computed": false
-        }
-      },
       "icon": {
         "defaultValue": {
           "value": "'fas fa-globe'",
+          "computed": false
+        }
+      },
+      "name": {
+        "defaultValue": {
+          "value": "'locale'",
           "computed": false
         }
       }
@@ -106,6 +106,12 @@
           "computed": false
         }
       },
+      "fields": {
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
       "isChecked": {
         "defaultValue": {
           "value": "() => false",
@@ -118,21 +124,15 @@
           "computed": false
         }
       },
-      "onUpdateCheck": {
-        "defaultValue": {
-          "value": "() => null",
-          "computed": false
-        }
-      },
       "keys": {
         "defaultValue": {
           "value": "null",
           "computed": false
         }
       },
-      "fields": {
+      "onUpdateCheck": {
         "defaultValue": {
-          "value": "{}",
+          "value": "() => null",
           "computed": false
         }
       }
@@ -168,15 +168,15 @@
     "displayName": "TheSearchForm",
     "methods": [],
     "props": {
-      "name": {
-        "defaultValue": {
-          "value": "'q'",
-          "computed": false
-        }
-      },
       "autoFocus": {
         "defaultValue": {
           "value": "false",
+          "computed": false
+        }
+      },
+      "name": {
+        "defaultValue": {
+          "value": "'q'",
           "computed": false
         }
       }
@@ -200,16 +200,16 @@
     "displayName": "TheSignUpForm",
     "methods": [],
     "props": {
-      "required": {
-        "defaultValue": {
-          "value": "['name', 'password', 'profile.email']",
-          "computed": false
-        }
-      },
       "nameParser": {
         "defaultValue": {
           "value": "userNameParser",
           "computed": true
+        }
+      },
+      "required": {
+        "defaultValue": {
+          "value": "['name', 'password', 'profile.email']",
+          "computed": false
         }
       },
       "step": {

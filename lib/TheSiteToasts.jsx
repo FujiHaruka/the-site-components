@@ -4,20 +4,20 @@
 'use strict'
 
 import React from 'react'
-import { TheToastGroup, TheToast } from 'the-components'
+import { TheToast, TheToastGroup } from 'the-components'
 
 function TheSiteToasts ({
-                          info,
-                          warn,
-                          error,
-                          onReset,
                           duration,
+                          error,
+                          info,
+                          onReset,
+                          warn,
                         }) {
   return (
     <TheToastGroup>
-      <TheToast.Info onUpdate={onReset} messages={info} clearAfter={duration}/>
-      <TheToast.Warn onUpdate={onReset} messages={warn} clearAfter={duration}/>
-      <TheToast.Error onUpdate={onReset} messages={error} clearAfter={duration}/>
+      <TheToast.Info clearAfter={duration} messages={info} onUpdate={onReset}/>
+      <TheToast.Warn clearAfter={duration} messages={warn} onUpdate={onReset}/>
+      <TheToast.Error clearAfter={duration} messages={error} onUpdate={onReset}/>
     </TheToastGroup>
   )
 }

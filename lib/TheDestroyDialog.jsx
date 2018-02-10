@@ -4,19 +4,19 @@
 'use strict'
 
 import React from 'react'
-import { TheConfirmDialog, TheOkDialog, } from 'the-components'
+import { TheConfirmDialog, TheOkDialog } from 'the-components'
 
 function TheDestroyDialog ({
-                             l,
-                             title,
-                             lead,
-                             spinning,
-                             onClose,
-                             onSubmit,
                              active,
                              done,
                              entities,
+                             l,
+                             lead,
+                             onClose,
+                             onSubmit,
                              renderItem = (entity) => entity.name,
+                             spinning,
+                             title,
                            }) {
   if (!active) {
     return null
@@ -25,15 +25,15 @@ function TheDestroyDialog ({
     return null
   }
   return (
-    <TheConfirmDialog present
-                      checkText={l('checks.SURE_TO_DESTROY')}
+    <TheConfirmDialog checkText={l('checks.SURE_TO_DESTROY')}
+                      present
                       submitText={l('buttons.DO_DESTROY')}
                       {...{
-                        title,
                         lead,
                         onClose,
                         onSubmit,
-                        spinning
+                        spinning,
+                        title,
                       }}
     >
       <ul>

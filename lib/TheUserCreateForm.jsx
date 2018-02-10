@@ -4,23 +4,23 @@
 'use strict'
 
 import React from 'react'
-import { TheForm, TheInput, TheButton, TheButtonGroup } from 'the-components'
+import { TheButton, TheButtonGroup, TheForm, TheInput } from 'the-components'
 
-const {Text, Radio} = TheInput
+const {Radio, Text} = TheInput
 const {Field, Label, Value} = TheForm
 
 function TheUserCreateForm ({
-                              l,
+                              getFormAttributes,
                               getInputAttributesOf,
                               getLabelAttributesOf,
-                              getFormAttributes,
                               getSubmitAttributes,
-                              roles = {}
+                              l,
+                              roles = {},
                             }) {
   return (
     <TheForm {...getFormAttributes()}
-             required={['name']}
              autoComplete='off'
+             required={['name']}
     >
       <Field>
         <Label {...getLabelAttributesOf('name')}>
@@ -61,7 +61,7 @@ function TheUserCreateForm ({
         </Value>
       </Field>
       <Field>
-        <TheButton wide primary {...getSubmitAttributes()}>
+        <TheButton primary wide {...getSubmitAttributes()}>
           {l('buttons.DO_CREATE')}
         </TheButton>
       </Field>

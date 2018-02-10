@@ -3,32 +3,32 @@
  */
 'use strict'
 
-import React from 'react'
 import c from 'classnames'
-import { TheForm, TheInput, TheButton } from 'the-components'
+import React from 'react'
+import { TheButton, TheForm, TheInput } from 'the-components'
 
 function TheSearchForm ({
-                          l,
-                          className,
-                          name = 'q',
                           autoFocus = false,
-                          placeholder,
-                          onSubmit,
-                          getInputAttributesOf,
+                          className,
                           getFormAttributes,
-                          getSubmitAttributes
+                          getInputAttributesOf,
+                          getSubmitAttributes,
+                          l,
+                          name = 'q',
+                          onSubmit,
+                          placeholder,
                         }) {
   return (
     <TheForm className={c(className)}
              inline
              {...getFormAttributes()}
-             required={[name]}
              autoComplete='off'
+             required={[name]}
     >
       <TheInput.Text {...getInputAttributesOf(name)}
-                     placeholder={placeholder}
                      autoFocus={autoFocus}
                      onEnter={onSubmit}
+                     placeholder={placeholder}
       />
       <TheButton primary {...getSubmitAttributes()}>
         {l('buttons.DO_SEARCH')}
