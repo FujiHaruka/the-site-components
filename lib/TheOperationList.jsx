@@ -6,7 +6,7 @@
 import { retrieve } from 'asobj'
 import c from 'classnames'
 import React from 'react'
-import { TheCondition, TheTable } from 'the-components'
+import { TheCondition, TheSpin, TheTable } from 'the-components'
 
 const {
   Body,
@@ -19,6 +19,7 @@ const {
 } = TheTable
 
 function TheOperationList ({
+                             busy = false,
                              className,
                              entities = [],
                              fields = {},
@@ -31,7 +32,10 @@ function TheOperationList ({
                              sort,
                            }) {
   return (
-    <div className={c(className)}>
+    <div className={c(className)}
+         style={{position: 'relative'}}
+    >
+      <TheSpin cover enabled={busy} size='x-large'/>
       <TheTable alt={l('alt.LIST_EMPTY')}
                 empty={entities && entities.length === 0}
       >

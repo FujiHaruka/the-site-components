@@ -233,6 +233,7 @@ Components
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
+| `busy` |   |  | `false` |
 | `entities` |   |  | `[]` |
 | `fields` |   |  | `{}` |
 | `isChecked` |   |  | `() => false` |
