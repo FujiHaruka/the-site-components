@@ -50,8 +50,8 @@ function TheFBLoginButton ({
     <TheButton className={styles.self}
                color={fbThemeColor}
                icon={fbIcon}
-               primary
                onClick={onLogin}
+               primary
                spinning={spinning}
     >
       {l('buttons.DO_LOGIN_FACEBOOK')}
