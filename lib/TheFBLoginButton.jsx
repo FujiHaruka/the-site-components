@@ -49,7 +49,8 @@ function TheFBLoginButton ({
   return (
     <TheButton className={styles.self}
                color={fbThemeColor}
-               largeIcon={fbIcon}
+               icon={fbIcon}
+               primary
                onClick={onLogin}
                spinning={spinning}
     >
