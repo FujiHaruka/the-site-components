@@ -15,8 +15,8 @@ function TheUsersRoleForm ({
                              getLabelAttributesOf,
                              getSubmitAttributes,
                              l,
-                             users = [],
                              roles = {},
+                             users = [],
                            }) {
   return (
     <TheForm {...getFormAttributes()}

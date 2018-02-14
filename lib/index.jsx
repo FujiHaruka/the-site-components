@@ -22,6 +22,7 @@ import TheSignUpForm from './TheSignUpForm'
 import TheSiteToasts from './TheSiteToasts'
 import TheUserCreateForm from './TheUserCreateForm'
 import TheUserImage from './TheUserImage'
+import TheUsersRoleForm from './TheUsersRoleForm'
 import helpers from './helpers'
 
 export {
@@ -43,6 +44,7 @@ export {
   TheSiteToasts,
   TheUserCreateForm,
   TheUserImage,
+  TheUsersRoleForm,
   helpers,
 }
 
