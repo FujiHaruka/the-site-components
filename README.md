@@ -162,7 +162,7 @@ export default ExampleComponent
 Components
 -----------
 
-### TheCautionDisconnectedDialog
+### TheConnectionRetryDialog
 
 
 

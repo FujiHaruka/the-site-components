@@ -1,7 +1,7 @@
 {
   "name": "the-site-components",
   "description": "Components for the-site",
-  "version": "2.5.6",
+  "version": "2.6.0",
   "author": {
     "name": "okunishinishi",
     "email": "okunishinishi@gmail.com",
@@ -19,19 +19,20 @@
     "the-style": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.0.0-beta.39",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/runtime": "^7.0.0-beta.40",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
     "the-component-demo": "^4.0.6",
-    "the-components": "^6.0.4",
-    "the-script-build": "^3.1.2",
+    "the-components": "^6.0.16",
+    "the-script-build": "^3.1.4",
     "the-script-doc": "^1.0.2",
     "the-script-release": "^1.0.6",
     "the-script-share": "^1.0.5",
     "the-script-test": "^2.1.0",
     "the-script-update": "^1.0.0",
-    "the-templates": "^2.5.6"
+    "the-templates": "^3.1.0"
   },
   "engines": {
     "node": ">=8",

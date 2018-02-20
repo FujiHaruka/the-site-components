@@ -1,7 +1,7 @@
 {
-  "TheCautionDisconnectedDialog": {
+  "TheConnectionRetryDialog": {
     "description": "",
-    "displayName": "TheCautionDisconnectedDialog",
+    "displayName": "TheConnectionRetryDialog",
     "methods": [],
     "props": {
       "reloadIcon": {
