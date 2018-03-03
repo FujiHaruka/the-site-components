@@ -8,7 +8,7 @@ function TheLocaleForm ({
                           className,
                           formPropsOf,
                           icon = 'fas fa-globe',
-                          inputPropsOfOf,
+                          inputPropsOf,
                           name = 'locale',
                           options,
                           value,
@@ -18,7 +18,7 @@ function TheLocaleForm ({
              {...formPropsOf()}
              className={c(className)}
     >
-      <TheInput.Select {...inputPropsOfOf(name)}
+      <TheInput.Select {...inputPropsOf(name)}
                        {...{value}}
                        options={Object.assign({},
                          ...Object.keys(options).map((name) => ({
