@@ -13,9 +13,9 @@ function TheProfileEditForm ({
                                children,
                                formPropsOf,
                                inputPropsOfOf,
+                               l,
                                labelPropsOfOf,
                                submitPropsOf,
-                               l,
                                user,
                              }) {
   return (

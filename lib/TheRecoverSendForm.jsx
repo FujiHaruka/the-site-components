@@ -11,10 +11,10 @@ const {Text} = TheInput
 function TheRecoverSendForm ({
                                formPropsOf,
                                inputPropsOfOf,
-                               labelPropsOfOf,
-                               submitPropsOf,
                                l,
+                               labelPropsOfOf,
                                onSubmit,
+                               submitPropsOf,
                              }) {
   return (
     <TheForm inline

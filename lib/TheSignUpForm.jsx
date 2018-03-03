@@ -14,14 +14,14 @@ function TheSignUpForm ({
                           children,
                           formPropsOf,
                           inputPropsOfOf,
-                          labelPropsOfOf,
-                          submitPropsOf,
                           l,
+                          labelPropsOfOf,
                           nameParser = userNameParser,
                           onStep,
                           onSubmit,
                           required = ['name', 'password', 'profile.email'],
                           step = 0,
+                          submitPropsOf,
                         }) {
   const toStepZero = () => onStep(0)
   const toStepOne = () => onStep(1)

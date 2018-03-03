@@ -12,10 +12,10 @@ const {Field, Label, Value} = TheForm
 function TheUserCreateForm ({
                               formPropsOf,
                               inputPropsOfOf,
-                              labelPropsOfOf,
-                              submitPropsOf,
                               l,
+                              labelPropsOfOf,
                               roles = {},
+                              submitPropsOf,
                             }) {
   return (
     <TheForm {...formPropsOf()}

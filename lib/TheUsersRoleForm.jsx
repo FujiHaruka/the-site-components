@@ -12,10 +12,10 @@ const {Field, Label, Value} = TheForm
 function TheUsersRoleForm ({
                              formPropsOf,
                              inputPropsOfOf,
-                             labelPropsOfOf,
-                             submitPropsOf,
                              l,
+                             labelPropsOfOf,
                              roles = {},
+                             submitPropsOf,
                              users = [],
                            }) {
   return (

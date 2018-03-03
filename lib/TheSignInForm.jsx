@@ -14,11 +14,11 @@ function TheSigninForm ({
                           children,
                           formPropsOf,
                           inputPropsOfOf,
-                          labelPropsOfOf,
-                          submitPropsOf,
                           l,
+                          labelPropsOfOf,
                           nameParser = userNameParser,
                           onSubmit,
+                          submitPropsOf,
                         }) {
   return (
     <TheForm {...formPropsOf()}

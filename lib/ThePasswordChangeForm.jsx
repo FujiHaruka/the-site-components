@@ -12,10 +12,10 @@ const {Field, Label, Value} = TheForm
 function ThePasswordChangeForm ({
                                   formPropsOf,
                                   inputPropsOfOf,
-                                  labelPropsOfOf,
-                                  submitPropsOf,
                                   l,
+                                  labelPropsOfOf,
                                   onSubmit,
+                                  submitPropsOf,
                                   user,
                                 }) {
   return (

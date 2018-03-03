@@ -12,11 +12,11 @@ function TheSearchForm ({
                           className,
                           formPropsOf,
                           inputPropsOfOf,
-                          submitPropsOf,
                           l,
                           name = 'q',
                           onSubmit,
                           placeholder,
+                          submitPropsOf,
                         }) {
   return (
     <TheForm className={c(className)}

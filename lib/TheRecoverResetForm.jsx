@@ -12,10 +12,10 @@ const {Field, Label, Value} = TheForm
 function TheRecoverResetForm ({
                                 formPropsOf,
                                 inputPropsOfOf,
-                                labelPropsOfOf,
-                                submitPropsOf,
                                 l,
+                                labelPropsOfOf,
                                 onSubmit,
+                                submitPropsOf,
                               }) {
 
   return (

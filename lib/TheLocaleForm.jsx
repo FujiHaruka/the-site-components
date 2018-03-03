@@ -7,8 +7,8 @@ import { TheForm, TheIcon, TheInput } from 'the-components'
 function TheLocaleForm ({
                           className,
                           formPropsOf,
-                          inputPropsOfOf,
                           icon = 'fas fa-globe',
+                          inputPropsOfOf,
                           name = 'locale',
                           options,
                           value,
