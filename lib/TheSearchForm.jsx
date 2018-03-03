@@ -10,9 +10,9 @@ import { TheButton, TheForm, TheInput } from 'the-components'
 function TheSearchForm ({
                           autoFocus = false,
                           className,
-                          getFormAttributes,
-                          getInputAttributesOf,
-                          getSubmitAttributes,
+                          formPropsOf,
+                          inputPropsOfOf,
+                          submitPropsOf,
                           l,
                           name = 'q',
                           onSubmit,
@@ -21,16 +21,16 @@ function TheSearchForm ({
   return (
     <TheForm className={c(className)}
              inline
-             {...getFormAttributes()}
+             {...formPropsOf()}
              autoComplete='off'
              required={[name]}
     >
-      <TheInput.Text {...getInputAttributesOf(name)}
+      <TheInput.Text {...inputPropsOfOf(name)}
                      autoFocus={autoFocus}
                      onEnter={onSubmit}
                      placeholder={placeholder}
       />
-      <TheButton primary {...getSubmitAttributes()}>
+      <TheButton primary {...submitPropsOf()}>
         {l('buttons.DO_SEARCH')}
       </TheButton>
     </TheForm>

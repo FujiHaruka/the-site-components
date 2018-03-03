@@ -12,10 +12,10 @@ const {Field, Label, Value} = TheForm
 
 function TheSignUpForm ({
                           children,
-                          getFormAttributes,
-                          getInputAttributesOf,
-                          getLabelAttributesOf,
-                          getSubmitAttributes,
+                          formPropsOf,
+                          inputPropsOfOf,
+                          labelPropsOfOf,
+                          submitPropsOf,
                           l,
                           nameParser = userNameParser,
                           onStep,
@@ -26,7 +26,7 @@ function TheSignUpForm ({
   const toStepZero = () => onStep(0)
   const toStepOne = () => onStep(1)
   return (
-    <TheForm {...getFormAttributes()}
+    <TheForm {...formPropsOf()}
              autoComplete='off'
              required={required}
     >
@@ -37,13 +37,13 @@ function TheSignUpForm ({
       >
         <TheStep.Content>
           <Field>
-            <Label {...getLabelAttributesOf('profile.email')}>
+            <Label {...labelPropsOfOf('profile.email')}>
               {l('labels.USER_EMAIL')}
             </Label>
             <Value>
               <Text placeholder={l('placeholders.USER_EMAIL')}
                     type='email'
-                    {...getInputAttributesOf('profile.email')}
+                    {...inputPropsOfOf('profile.email')}
                     onEnter={toStepOne}
                     onFocus={toStepZero}
                     pattern={Text.EMAIL_PATTERN}
@@ -53,13 +53,13 @@ function TheSignUpForm ({
           </Field>
         </TheStep.Content>
         <TheStep.Content>
-          <TheCondition if={!!getInputAttributesOf('profile.email').value}>
+          <TheCondition if={!!inputPropsOfOf('profile.email').value}>
             <Field>
-              <Label {...getLabelAttributesOf('profile.email')}>
+              <Label {...labelPropsOfOf('profile.email')}>
                 {l('labels.USER_EMAIL')}
               </Label>
               <Value>
-                <Text {...getInputAttributesOf('profile.email')}
+                <Text {...inputPropsOfOf('profile.email')}
                       onFocus={toStepOne}
                       readOnly
                 />
@@ -67,34 +67,34 @@ function TheSignUpForm ({
             </Field>
           </TheCondition>
           <Field>
-            <Label {...getLabelAttributesOf('name')}>
+            <Label {...labelPropsOfOf('name')}>
               {l('labels.USER_NAME')}
             </Label>
             <Value>
               <Text placeholder={l('placeholders.USER_NAME')}
-                    {...getInputAttributesOf('name')}
+                    {...inputPropsOfOf('name')}
                     onFocus={toStepOne}
                     parser={nameParser}
               />
             </Value>
           </Field>
           <Field>
-            <Label {...getLabelAttributesOf('profile.name')}>
+            <Label {...labelPropsOfOf('profile.name')}>
               {l('labels.USER_PROFILE_NAME')}
             </Label>
             <Value>
               <Text onFocus={toStepOne}
                     placeholder={l('placeholders.USER_PROFILE_NAME')}
-                    {...getInputAttributesOf('profile.name')}/>
+                    {...inputPropsOfOf('profile.name')}/>
             </Value>
           </Field>
           {children}
           <Field>
-            <Label {...getLabelAttributesOf('password')}>
+            <Label {...labelPropsOfOf('password')}>
               {l('labels.USER_PASSWORD')}
             </Label>
             <Value>
-              <Password {...getInputAttributesOf('password')}
+              <Password {...inputPropsOfOf('password')}
                         autoComplete='new-password'
                         onFocus={toStepOne}
               />

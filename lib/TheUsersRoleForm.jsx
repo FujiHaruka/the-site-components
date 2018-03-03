@@ -10,21 +10,21 @@ const {Radio, Text} = TheInput
 const {Field, Label, Value} = TheForm
 
 function TheUsersRoleForm ({
-                             getFormAttributes,
-                             getInputAttributesOf,
-                             getLabelAttributesOf,
-                             getSubmitAttributes,
+                             formPropsOf,
+                             inputPropsOfOf,
+                             labelPropsOfOf,
+                             submitPropsOf,
                              l,
                              roles = {},
                              users = [],
                            }) {
   return (
-    <TheForm {...getFormAttributes()}
+    <TheForm {...formPropsOf()}
              autoComplete='off'
              required={['role']}
     >
       <Field>
-        <Label {...getLabelAttributesOf('targets')}>
+        <Label {...labelPropsOfOf('targets')}>
           {l('labels.TARGETS')}
         </Label>
         <Value>
@@ -37,18 +37,18 @@ function TheUsersRoleForm ({
         </Value>
       </Field>
       <Field>
-        <Label {...getLabelAttributesOf('role')}>
+        <Label {...labelPropsOfOf('role')}>
           {l('labels.USER_ROLE')}
         </Label>
         <Value>
-          <Radio {...getInputAttributesOf('role')}
+          <Radio {...inputPropsOfOf('role')}
                  options={roles}
           />
         </Value>
       </Field>
       <br/>
       <Field>
-        <TheButton primary wide {...getSubmitAttributes()}>
+        <TheButton primary wide {...submitPropsOf()}>
           {l('buttons.DO_UPDATE')}
         </TheButton>
       </Field>

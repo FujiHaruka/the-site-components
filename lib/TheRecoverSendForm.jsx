@@ -9,24 +9,24 @@ import { TheButton, TheForm, TheInput } from 'the-components'
 const {Text} = TheInput
 
 function TheRecoverSendForm ({
-                               getFormAttributes,
-                               getInputAttributesOf,
-                               getLabelAttributesOf,
-                               getSubmitAttributes,
+                               formPropsOf,
+                               inputPropsOfOf,
+                               labelPropsOfOf,
+                               submitPropsOf,
                                l,
                                onSubmit,
                              }) {
   return (
     <TheForm inline
-             {...getFormAttributes()}
+             {...formPropsOf()}
              autoComplete='off'
              required={['email']}
     >
       <Text autoFocus
             onEnter={onSubmit}
             placeholder={l('placeholders.USER_EMAIL')}
-            {...getInputAttributesOf('email')}/>
-      <TheButton primary {...getSubmitAttributes()}>
+            {...inputPropsOfOf('email')}/>
+      <TheButton primary {...submitPropsOf()}>
         {l('buttons.DO_SEND')}
       </TheButton>
     </TheForm>

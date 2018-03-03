@@ -11,15 +11,15 @@ const {Field, Label, Value} = TheForm
 
 function TheProfileEditForm ({
                                children,
-                               getFormAttributes,
-                               getInputAttributesOf,
-                               getLabelAttributesOf,
-                               getSubmitAttributes,
+                               formPropsOf,
+                               inputPropsOfOf,
+                               labelPropsOfOf,
+                               submitPropsOf,
                                l,
                                user,
                              }) {
   return (
-    <TheForm {...getFormAttributes()}
+    <TheForm {...formPropsOf()}
              required={['name']}
     >
       <Field>
@@ -31,16 +31,16 @@ function TheProfileEditForm ({
         </Value>
       </Field>
       <Field>
-        <Label {...getLabelAttributesOf('name')}>
+        <Label {...labelPropsOfOf('name')}>
           {l('labels.USER_PROFILE_NAME')}
         </Label>
         <Value>
           <Text placeholder={l('placeholders.USER_PROFILE_NAME')}
-                {...getInputAttributesOf('name')}/>
+                {...inputPropsOfOf('name')}/>
         </Value>
       </Field>
       <Field>
-        <Label {...getLabelAttributesOf('email')}>
+        <Label {...labelPropsOfOf('email')}>
           {l('labels.USER_EMAIL')}
         </Label>
         <Value>
@@ -48,22 +48,22 @@ function TheProfileEditForm ({
                 patternWarning={l('warnings.SEEMS_INVALID_EMAIL')}
                 placeholder={l('placeholders.USER_EMAIL')}
                 type='email'
-                {...getInputAttributesOf('email')}/>
+                {...inputPropsOfOf('email')}/>
         </Value>
       </Field>
       <Field>
-        <Label {...getLabelAttributesOf('image')}>
+        <Label {...labelPropsOfOf('image')}>
           {l('labels.USER_IMAGE')}
         </Label>
         <Value>
           <Upload multiple={false}
-                  {...getInputAttributesOf('image')}/>
+                  {...inputPropsOfOf('image')}/>
         </Value>
       </Field>
       {children}
       <br/>
       <Field>
-        <TheButton primary wide {...getSubmitAttributes()}>
+        <TheButton primary wide {...submitPropsOf()}>
           {l('buttons.DO_UPDATE')}
         </TheButton>
       </Field>

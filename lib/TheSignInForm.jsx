@@ -12,44 +12,44 @@ const {Field, Label, Value} = TheForm
 
 function TheSigninForm ({
                           children,
-                          getFormAttributes,
-                          getInputAttributesOf,
-                          getLabelAttributesOf,
-                          getSubmitAttributes,
+                          formPropsOf,
+                          inputPropsOfOf,
+                          labelPropsOfOf,
+                          submitPropsOf,
                           l,
                           nameParser = userNameParser,
                           onSubmit,
                         }) {
   return (
-    <TheForm {...getFormAttributes()}
+    <TheForm {...formPropsOf()}
     >
-      <TheInput {...getInputAttributesOf('@')}
+      <TheInput {...inputPropsOfOf('@')}
                 onUpdate={() => null}
                 type='hidden'/>
       <Field>
-        <Label {...getLabelAttributesOf('name')}>
+        <Label {...labelPropsOfOf('name')}>
           {l('labels.USER_NAME')}
         </Label>
         <Value>
           <Text placeholder={l('placeholders.USER_NAME')}
-                {...getInputAttributesOf('name')}
+                {...inputPropsOfOf('name')}
                 parser={nameParser}
           />
         </Value>
       </Field>
       <Field>
-        <Label {...getLabelAttributesOf('password')}>
+        <Label {...labelPropsOfOf('password')}>
           {l('labels.USER_PASSWORD')}
         </Label>
         <Value>
-          <Password {...getInputAttributesOf('password')}
+          <Password {...inputPropsOfOf('password')}
                     onEnter={onSubmit}
           />
         </Value>
       </Field>
       {children}
       <Field>
-        <TheButton primary wide {...getSubmitAttributes()}>
+        <TheButton primary wide {...submitPropsOf()}>
           {l('buttons.DO_SIGN_IN')}
         </TheButton>
       </Field>

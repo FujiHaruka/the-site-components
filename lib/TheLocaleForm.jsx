@@ -6,8 +6,8 @@ import { TheForm, TheIcon, TheInput } from 'the-components'
 
 function TheLocaleForm ({
                           className,
-                          getFormAttributes,
-                          getInputAttributesOf,
+                          formPropsOf,
+                          inputPropsOfOf,
                           icon = 'fas fa-globe',
                           name = 'locale',
                           options,
@@ -15,10 +15,10 @@ function TheLocaleForm ({
                         }) {
   return (
     <TheForm inline
-             {...getFormAttributes()}
+             {...formPropsOf()}
              className={c(className)}
     >
-      <TheInput.Select {...getInputAttributesOf(name)}
+      <TheInput.Select {...inputPropsOfOf(name)}
                        {...{value}}
                        options={Object.assign({},
                          ...Object.keys(options).map((name) => ({

@@ -10,31 +10,31 @@ const {Password} = TheInput
 const {Field, Label, Value} = TheForm
 
 function TheRecoverResetForm ({
-                                getFormAttributes,
-                                getInputAttributesOf,
-                                getLabelAttributesOf,
-                                getSubmitAttributes,
+                                formPropsOf,
+                                inputPropsOfOf,
+                                labelPropsOfOf,
+                                submitPropsOf,
                                 l,
                                 onSubmit,
                               }) {
 
   return (
-    <TheForm {...getFormAttributes()}
+    <TheForm {...formPropsOf()}
              required={['password']}
     >
       <Field>
-        <Label {...getLabelAttributesOf('password')}>
+        <Label {...labelPropsOfOf('password')}>
           {l('labels.NEW_PASSWORD')}
         </Label>
         <Value>
           <Password placeholder={l('placeholders.NEW_PASSWORD')}
-                    {...getInputAttributesOf('password')}
+                    {...inputPropsOfOf('password')}
                     onEnter={onSubmit}/>
         </Value>
       </Field>
       <br/>
       <Field>
-        <TheButton primary wide {...getSubmitAttributes()}>
+        <TheButton primary wide {...submitPropsOf()}>
           {l('buttons.DO_UPDATE')}
         </TheButton>
       </Field>

@@ -10,58 +10,58 @@ const {Radio, Text} = TheInput
 const {Field, Label, Value} = TheForm
 
 function TheUserCreateForm ({
-                              getFormAttributes,
-                              getInputAttributesOf,
-                              getLabelAttributesOf,
-                              getSubmitAttributes,
+                              formPropsOf,
+                              inputPropsOfOf,
+                              labelPropsOfOf,
+                              submitPropsOf,
                               l,
                               roles = {},
                             }) {
   return (
-    <TheForm {...getFormAttributes()}
+    <TheForm {...formPropsOf()}
              autoComplete='off'
              required={['name']}
     >
       <Field>
-        <Label {...getLabelAttributesOf('name')}>
+        <Label {...labelPropsOfOf('name')}>
           {l('labels.USER_NAME')}
         </Label>
         <Value>
           <Text placeholder={l('placeholders.USER_NAME')}
-                {...getInputAttributesOf('name')}/>
+                {...inputPropsOfOf('name')}/>
         </Value>
       </Field>
       <Field>
-        <Label {...getLabelAttributesOf('profile.name')}>
+        <Label {...labelPropsOfOf('profile.name')}>
           {l('labels.USER_PROFILE_NAME')}
         </Label>
         <Value>
           <Text placeholder={l('placeholders.USER_PROFILE_NAME')}
-                {...getInputAttributesOf('profile.name')}/>
+                {...inputPropsOfOf('profile.name')}/>
         </Value>
       </Field>
       <Field>
-        <Label {...getLabelAttributesOf('profile.email')}>
+        <Label {...labelPropsOfOf('profile.email')}>
           {l('labels.USER_EMAIL')}
         </Label>
         <Value>
           <Text placeholder={l('placeholders.USER_EMAIL')}
                 type='email'
-                {...getInputAttributesOf('profile.email')}/>
+                {...inputPropsOfOf('profile.email')}/>
         </Value>
       </Field>
       <Field>
-        <Label {...getLabelAttributesOf('role')}>
+        <Label {...labelPropsOfOf('role')}>
           {l('labels.USER_ROLE')}
         </Label>
         <Value>
-          <Radio {...getInputAttributesOf('role')}
+          <Radio {...inputPropsOfOf('role')}
                  options={roles}
           />
         </Value>
       </Field>
       <Field>
-        <TheButton primary wide {...getSubmitAttributes()}>
+        <TheButton primary wide {...submitPropsOf()}>
           {l('buttons.DO_CREATE')}
         </TheButton>
       </Field>
