@@ -11,9 +11,9 @@ const {Field, Label, Value} = TheForm
 
 function ThePasswordChangeForm ({
                                   formPropsOf,
-                                  inputPropsOfOf,
+                                  inputPropsOf,
                                   l,
-                                  labelPropsOfOf,
+                                  labelPropsOf,
                                   onSubmit,
                                   submitPropsOf,
                                   user,
@@ -31,14 +31,14 @@ function ThePasswordChangeForm ({
         </Value>
       </Field>
       <Field>
-        <Label {...labelPropsOfOf('password')}>
+        <Label {...labelPropsOf('password')}>
           {l('labels.NEW_PASSWORD')}
         </Label>
         <Value>
           <Password autoFocus
                     onEnter={onSubmit}
                     placeholder={l('placeholders.NEW_PASSWORD')}
-                    {...inputPropsOfOf('password')}/>
+                    {...inputPropsOf('password')}/>
         </Value>
       </Field>
       <br/>

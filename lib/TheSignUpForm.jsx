@@ -13,9 +13,9 @@ const {Field, Label, Value} = TheForm
 function TheSignUpForm ({
                           children,
                           formPropsOf,
-                          inputPropsOfOf,
+                          inputPropsOf,
                           l,
-                          labelPropsOfOf,
+                          labelPropsOf,
                           nameParser = userNameParser,
                           onStep,
                           onSubmit,
@@ -37,13 +37,13 @@ function TheSignUpForm ({
       >
         <TheStep.Content>
           <Field>
-            <Label {...labelPropsOfOf('profile.email')}>
+            <Label {...labelPropsOf('profile.email')}>
               {l('labels.USER_EMAIL')}
             </Label>
             <Value>
               <Text placeholder={l('placeholders.USER_EMAIL')}
                     type='email'
-                    {...inputPropsOfOf('profile.email')}
+                    {...inputPropsOf('profile.email')}
                     onEnter={toStepOne}
                     onFocus={toStepZero}
                     pattern={Text.EMAIL_PATTERN}
@@ -53,13 +53,13 @@ function TheSignUpForm ({
           </Field>
         </TheStep.Content>
         <TheStep.Content>
-          <TheCondition if={!!inputPropsOfOf('profile.email').value}>
+          <TheCondition if={!!inputPropsOf('profile.email').value}>
             <Field>
-              <Label {...labelPropsOfOf('profile.email')}>
+              <Label {...labelPropsOf('profile.email')}>
                 {l('labels.USER_EMAIL')}
               </Label>
               <Value>
-                <Text {...inputPropsOfOf('profile.email')}
+                <Text {...inputPropsOf('profile.email')}
                       onFocus={toStepOne}
                       readOnly
                 />
@@ -67,34 +67,34 @@ function TheSignUpForm ({
             </Field>
           </TheCondition>
           <Field>
-            <Label {...labelPropsOfOf('name')}>
+            <Label {...labelPropsOf('name')}>
               {l('labels.USER_NAME')}
             </Label>
             <Value>
               <Text placeholder={l('placeholders.USER_NAME')}
-                    {...inputPropsOfOf('name')}
+                    {...inputPropsOf('name')}
                     onFocus={toStepOne}
                     parser={nameParser}
               />
             </Value>
           </Field>
           <Field>
-            <Label {...labelPropsOfOf('profile.name')}>
+            <Label {...labelPropsOf('profile.name')}>
               {l('labels.USER_PROFILE_NAME')}
             </Label>
             <Value>
               <Text onFocus={toStepOne}
                     placeholder={l('placeholders.USER_PROFILE_NAME')}
-                    {...inputPropsOfOf('profile.name')}/>
+                    {...inputPropsOf('profile.name')}/>
             </Value>
           </Field>
           {children}
           <Field>
-            <Label {...labelPropsOfOf('password')}>
+            <Label {...labelPropsOf('password')}>
               {l('labels.USER_PASSWORD')}
             </Label>
             <Value>
-              <Password {...inputPropsOfOf('password')}
+              <Password {...inputPropsOf('password')}
                         autoComplete='new-password'
                         onFocus={toStepOne}
               />

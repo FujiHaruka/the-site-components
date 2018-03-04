@@ -13,9 +13,9 @@ const {Field, Label, Value} = TheForm
 function TheSigninForm ({
                           children,
                           formPropsOf,
-                          inputPropsOfOf,
+                          inputPropsOf,
                           l,
-                          labelPropsOfOf,
+                          labelPropsOf,
                           nameParser = userNameParser,
                           onSubmit,
                           submitPropsOf,
@@ -23,26 +23,26 @@ function TheSigninForm ({
   return (
     <TheForm {...formPropsOf()}
     >
-      <TheInput {...inputPropsOfOf('@')}
+      <TheInput {...inputPropsOf('@')}
                 onUpdate={() => null}
                 type='hidden'/>
       <Field>
-        <Label {...labelPropsOfOf('name')}>
+        <Label {...labelPropsOf('name')}>
           {l('labels.USER_NAME')}
         </Label>
         <Value>
           <Text placeholder={l('placeholders.USER_NAME')}
-                {...inputPropsOfOf('name')}
+                {...inputPropsOf('name')}
                 parser={nameParser}
           />
         </Value>
       </Field>
       <Field>
-        <Label {...labelPropsOfOf('password')}>
+        <Label {...labelPropsOf('password')}>
           {l('labels.USER_PASSWORD')}
         </Label>
         <Value>
-          <Password {...inputPropsOfOf('password')}
+          <Password {...inputPropsOf('password')}
                     onEnter={onSubmit}
           />
         </Value>

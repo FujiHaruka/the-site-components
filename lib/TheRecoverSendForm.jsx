@@ -10,9 +10,9 @@ const {Text} = TheInput
 
 function TheRecoverSendForm ({
                                formPropsOf,
-                               inputPropsOfOf,
+                               inputPropsOf,
                                l,
-                               labelPropsOfOf,
+                               labelPropsOf,
                                onSubmit,
                                submitPropsOf,
                              }) {
@@ -25,7 +25,7 @@ function TheRecoverSendForm ({
       <Text autoFocus
             onEnter={onSubmit}
             placeholder={l('placeholders.USER_EMAIL')}
-            {...inputPropsOfOf('email')}/>
+            {...inputPropsOf('email')}/>
       <TheButton primary {...submitPropsOf()}>
         {l('buttons.DO_SEND')}
       </TheButton>

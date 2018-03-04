@@ -11,7 +11,7 @@ function TheSearchForm ({
                           autoFocus = false,
                           className,
                           formPropsOf,
-                          inputPropsOfOf,
+                          inputPropsOf,
                           l,
                           name = 'q',
                           onSubmit,
@@ -25,7 +25,7 @@ function TheSearchForm ({
              autoComplete='off'
              required={[name]}
     >
-      <TheInput.Text {...inputPropsOfOf(name)}
+      <TheInput.Text {...inputPropsOf(name)}
                      autoFocus={autoFocus}
                      onEnter={onSubmit}
                      placeholder={placeholder}

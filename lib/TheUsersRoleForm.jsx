@@ -11,9 +11,9 @@ const {Field, Label, Value} = TheForm
 
 function TheUsersRoleForm ({
                              formPropsOf,
-                             inputPropsOfOf,
+                             inputPropsOf,
                              l,
-                             labelPropsOfOf,
+                             labelPropsOf,
                              roles = {},
                              submitPropsOf,
                              users = [],
@@ -24,7 +24,7 @@ function TheUsersRoleForm ({
              required={['role']}
     >
       <Field>
-        <Label {...labelPropsOfOf('targets')}>
+        <Label {...labelPropsOf('targets')}>
           {l('labels.TARGETS')}
         </Label>
         <Value>
@@ -37,11 +37,11 @@ function TheUsersRoleForm ({
         </Value>
       </Field>
       <Field>
-        <Label {...labelPropsOfOf('role')}>
+        <Label {...labelPropsOf('role')}>
           {l('labels.USER_ROLE')}
         </Label>
         <Value>
-          <Radio {...inputPropsOfOf('role')}
+          <Radio {...inputPropsOf('role')}
                  options={roles}
           />
         </Value>

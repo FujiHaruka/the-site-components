@@ -11,9 +11,9 @@ const {Field, Label, Value} = TheForm
 
 function TheUserCreateForm ({
                               formPropsOf,
-                              inputPropsOfOf,
+                              inputPropsOf,
                               l,
-                              labelPropsOfOf,
+                              labelPropsOf,
                               roles = {},
                               submitPropsOf,
                             }) {
@@ -23,39 +23,39 @@ function TheUserCreateForm ({
              required={['name']}
     >
       <Field>
-        <Label {...labelPropsOfOf('name')}>
+        <Label {...labelPropsOf('name')}>
           {l('labels.USER_NAME')}
         </Label>
         <Value>
           <Text placeholder={l('placeholders.USER_NAME')}
-                {...inputPropsOfOf('name')}/>
+                {...inputPropsOf('name')}/>
         </Value>
       </Field>
       <Field>
-        <Label {...labelPropsOfOf('profile.name')}>
+        <Label {...labelPropsOf('profile.name')}>
           {l('labels.USER_PROFILE_NAME')}
         </Label>
         <Value>
           <Text placeholder={l('placeholders.USER_PROFILE_NAME')}
-                {...inputPropsOfOf('profile.name')}/>
+                {...inputPropsOf('profile.name')}/>
         </Value>
       </Field>
       <Field>
-        <Label {...labelPropsOfOf('profile.email')}>
+        <Label {...labelPropsOf('profile.email')}>
           {l('labels.USER_EMAIL')}
         </Label>
         <Value>
           <Text placeholder={l('placeholders.USER_EMAIL')}
                 type='email'
-                {...inputPropsOfOf('profile.email')}/>
+                {...inputPropsOf('profile.email')}/>
         </Value>
       </Field>
       <Field>
-        <Label {...labelPropsOfOf('role')}>
+        <Label {...labelPropsOf('role')}>
           {l('labels.USER_ROLE')}
         </Label>
         <Value>
-          <Radio {...inputPropsOfOf('role')}
+          <Radio {...inputPropsOf('role')}
                  options={roles}
           />
         </Value>

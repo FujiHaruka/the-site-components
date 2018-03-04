@@ -12,9 +12,9 @@ const {Field, Label, Value} = TheForm
 function TheProfileEditForm ({
                                children,
                                formPropsOf,
-                               inputPropsOfOf,
+                               inputPropsOf,
                                l,
-                               labelPropsOfOf,
+                               labelPropsOf,
                                submitPropsOf,
                                user,
                              }) {
@@ -31,16 +31,16 @@ function TheProfileEditForm ({
         </Value>
       </Field>
       <Field>
-        <Label {...labelPropsOfOf('name')}>
+        <Label {...labelPropsOf('name')}>
           {l('labels.USER_PROFILE_NAME')}
         </Label>
         <Value>
           <Text placeholder={l('placeholders.USER_PROFILE_NAME')}
-                {...inputPropsOfOf('name')}/>
+                {...inputPropsOf('name')}/>
         </Value>
       </Field>
       <Field>
-        <Label {...labelPropsOfOf('email')}>
+        <Label {...labelPropsOf('email')}>
           {l('labels.USER_EMAIL')}
         </Label>
         <Value>
@@ -48,16 +48,16 @@ function TheProfileEditForm ({
                 patternWarning={l('warnings.SEEMS_INVALID_EMAIL')}
                 placeholder={l('placeholders.USER_EMAIL')}
                 type='email'
-                {...inputPropsOfOf('email')}/>
+                {...inputPropsOf('email')}/>
         </Value>
       </Field>
       <Field>
-        <Label {...labelPropsOfOf('image')}>
+        <Label {...labelPropsOf('image')}>
           {l('labels.USER_IMAGE')}
         </Label>
         <Value>
           <Upload multiple={false}
-                  {...inputPropsOfOf('image')}/>
+                  {...inputPropsOf('image')}/>
         </Value>
       </Field>
       {children}

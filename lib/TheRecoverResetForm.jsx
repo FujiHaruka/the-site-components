@@ -11,9 +11,9 @@ const {Field, Label, Value} = TheForm
 
 function TheRecoverResetForm ({
                                 formPropsOf,
-                                inputPropsOfOf,
+                                inputPropsOf,
                                 l,
-                                labelPropsOfOf,
+                                labelPropsOf,
                                 onSubmit,
                                 submitPropsOf,
                               }) {
@@ -23,12 +23,12 @@ function TheRecoverResetForm ({
              required={['password']}
     >
       <Field>
-        <Label {...labelPropsOfOf('password')}>
+        <Label {...labelPropsOf('password')}>
           {l('labels.NEW_PASSWORD')}
         </Label>
         <Value>
           <Password placeholder={l('placeholders.NEW_PASSWORD')}
-                    {...inputPropsOfOf('password')}
+                    {...inputPropsOf('password')}
                     onEnter={onSubmit}/>
         </Value>
       </Field>
