@@ -8,6 +8,7 @@ import React from 'react'
 import { TheImage } from 'the-components'
 
 function TheUserImage ({
+                         altImage,
                          className,
                          size = 48,
                          user,
@@ -24,7 +25,7 @@ function TheUserImage ({
               className={c(className)}
               height={size}
               scale='fit'
-              src={displayImage}
+              src={displayImage || altImage}
               width={size}
     />
   )
