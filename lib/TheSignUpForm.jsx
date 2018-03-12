@@ -32,6 +32,7 @@ function TheSignUpForm ({
     >
       <TheStep {...{onStep, step}}
                isSubmit={step === 1}
+               nextText={l('buttons.SHOW_NEXT')}
                onSubmit={onSubmit}
                submitText={l('buttons.DO_SIGN_UP')}
       >
