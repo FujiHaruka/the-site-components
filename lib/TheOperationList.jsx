@@ -61,7 +61,9 @@ function TheOperationList ({
         <Body>
         {
           entities.map((entity) => (
-            <Row key={entity.id}
+            <Row aria-checked={isChecked(entity)}
+                 data-entity-id={entity.id}
+                 key={entity.id}
                  selected={isChecked(entity)}
             >
               <TheCondition if={isFreezed(entity)}>
