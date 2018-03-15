@@ -33,6 +33,8 @@ function TheSigninForm ({
         <Value>
           <Text placeholder={l('placeholders.USER_NAME')}
                 {...inputPropsOf('name')}
+                autoCapitalize='off'
+                autoCorrect='off'
                 parser={nameParser}
           />
         </Value>
@@ -43,6 +45,8 @@ function TheSigninForm ({
         </Label>
         <Value>
           <Password {...inputPropsOf('password')}
+                    autoCapitalize='off'
+                    autoCorrect='off'
                     onEnter={onSubmit}
           />
         </Value>

@@ -42,7 +42,9 @@ function TheSignUpForm ({
               {l('labels.USER_EMAIL')}
             </Label>
             <Value>
-              <Text placeholder={l('placeholders.USER_EMAIL')}
+              <Text autoCapitalize='off'
+                    autoCorrect='off'
+                    placeholder={l('placeholders.USER_EMAIL')}
                     type='email'
                     {...inputPropsOf('profile.email')}
                     onEnter={toStepOne}
@@ -74,6 +76,8 @@ function TheSignUpForm ({
             <Value>
               <Text placeholder={l('placeholders.USER_NAME')}
                     {...inputPropsOf('name')}
+                    autoCapitalize='off'
+                    autoCorrect='off'
                     onFocus={toStepOne}
                     parser={nameParser}
               />
