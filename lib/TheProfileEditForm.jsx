@@ -56,7 +56,8 @@ function TheProfileEditForm ({
           {l('labels.USER_IMAGE')}
         </Label>
         <Value>
-          <Upload multiple={false}
+          <Upload accept='image/*'
+                  multiple={false}
                   {...inputPropsOf('image')}/>
         </Value>
       </Field>
